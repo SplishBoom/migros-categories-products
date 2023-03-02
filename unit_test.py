@@ -1,6 +1,7 @@
 from Utilities import Web, By
 from pprint import pprint
 
+"""
 def retrieve_main_categories() :
 
     client = Web(isHidden=True)
@@ -34,3 +35,4 @@ def retrieve_main_categories() :
     return category_link_map
 
 pprint(retrieve_main_categories())
+"""
