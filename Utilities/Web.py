@@ -4,7 +4,7 @@ from    selenium.webdriver.common.by       import By
 from    selenium                           import webdriver
 import  os
 
-from Constants import *
+from Constants import CHROME_DRIVER_PATH
 
 class Web :
 

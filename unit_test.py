@@ -1,8 +1,6 @@
 from Utilities import Web, By
 from pprint import pprint
 
-from Constants import *
-
 def retrieve_main_categories() :
 
     client = Web(isHidden=True)
