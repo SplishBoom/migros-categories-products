@@ -42,14 +42,6 @@ def _retrieve_sub_category_list(name, link, client) :
                 current_dict[item] = {}
             current_dict = current_dict[item]
 
-    def clear_catalog():
-        for category, subcategories in catalog.items():
-            for subcategory, subsubcategories in subcategories.items():
-                if subsubcategories:
-                    catalog[category][subcategory] = list(subsubcategories.keys())
-                else:
-                    catalog[category][subcategory] = []
-
     temp = []
     def top_down_research(name, browser) :
 
@@ -64,6 +56,8 @@ def _retrieve_sub_category_list(name, link, client) :
                 current_path = temp
             else :
                 current_path = temp + [last_element_name]
+
+            print(colorama.Fore.GREEN, "Found: ", colorama.Fore.RESET, current_path)
 
             update_catalog(current_path)
 
@@ -94,8 +88,6 @@ def _retrieve_sub_category_list(name, link, client) :
     browser.openWebPage(link)
 
     top_down_research(name, browser)
-
-    clear_catalog()
 
     with open(OUTPUT_JSON_FILE_PATH, "r", encoding="utf-8") as file :
         data = json.load(file)
