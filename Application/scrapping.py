@@ -57,7 +57,7 @@ def _retrieve_sub_category_list(name, link, client) :
             else :
                 current_path = temp + [last_element_name]
 
-            print(colorama.Fore.GREEN, "Found: ", colorama.Fore.RESET, current_path)
+            #print(colorama.Fore.GREEN, "Found: ", colorama.Fore.RESET, current_path)
 
             update_catalog(current_path)
 
@@ -112,6 +112,6 @@ def scrapper() :
     for name, link in progressBar(iterable, "Scrapping Progress", length=40) :
         _retrieve_sub_category_list(name, link, client)
         
-    print(colorama.Fore.RESET, "\n")
+    print(colorama.Fore.RESET)
 
     client.terminate()
