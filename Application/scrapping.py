@@ -69,11 +69,16 @@ def _retrieve_sub_category_list(name, link, client) :
 
         while counter < len(category_list) : 
 
-            current_sub_category = browser.createElement("/html/body/sm-root/div/main/sm-product/article/sm-list/div/div[4]/div[1]/sm-product-filters-desktop/div/div[2]/div[2]").find_elements(By.TAG_NAME, "div")[counter]
+            try :
+                current_sub_category = browser.createElement("/html/body/sm-root/div/main/sm-product/article/sm-list/div/div[4]/div[1]/sm-product-filters-desktop/div/div[2]/div[2]").find_elements(By.TAG_NAME, "div")[counter]
 
-            sub_catagory_name = current_sub_category.text[0:current_sub_category.text.find("(")].strip()
-            sub_catagory_link = current_sub_category.find_element(By.TAG_NAME, "a").get_attribute("href")
-            sub_category_product_count = current_sub_category.text[current_sub_category.text.find("(")+1:current_sub_category.text.find(")")]
+                sub_catagory_name = current_sub_category.text[0:current_sub_category.text.find("(")].strip()
+                sub_catagory_link = current_sub_category.find_element(By.TAG_NAME, "a").get_attribute("href")
+                sub_category_product_count = current_sub_category.text[current_sub_category.text.find("(")+1:current_sub_category.text.find(")")]
+            except :
+                #print(colorama.Fore.BLACK, colorama.Back.RED, f"***ERROR: Couldn't resolve the element of {name}, {category_list[counter]}", colorama.Fore.RESET, colorama.Back.RESET)
+                counter = counter + 1
+                continue
             
             browser.openWebPage(sub_catagory_link)
 
