@@ -1,0 +1,1 @@
+from Application.scrapping import scrapper
