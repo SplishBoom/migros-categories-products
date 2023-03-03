@@ -12,10 +12,12 @@ class Web :
 
         os.chmod(driver_path, 755)
 
-        self.service = Service(executable_path=driver_path)
+        self.service = Service(executable_path=driver_path,)
         self.options = Options()
 
         self.options.add_argument("--window-size=1920,1080")
+        self.options.add_argument("--log-level=3")
+        self.options.add_experimental_option("excludeSwitches", ["enable-logging"])
 
         if isHidden :
             self.options.add_argument("--headless")

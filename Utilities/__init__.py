@@ -4,3 +4,5 @@ from Utilities.safe_run import (
 )
 
 from Utilities.Web import Web, By
+
+from Utilities.Utils import progressBar

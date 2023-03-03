@@ -8,8 +8,11 @@ import  io
 import  shutil
 import  colorama
 import  re
+import  json
+import  datetime
+import  platform
 
-from Constants import connect_pathes, CHROME_DRIVER_PATH, CACHED_FOLDER_LIST, CHROME_DRIVER_APPLICATION_DISPATCH, PRE_EXISTING_CHECKLIST
+from Constants import connect_pathes, OUTPUT_JSON_FILE_PATH, CHROME_DRIVER_PATH, CACHED_FOLDER_LIST, CHROME_DRIVER_APPLICATION_DISPATCH, PRE_EXISTING_CHECKLIST
 from Constants import connect_urls, CONNECTION_TEST_URL, CHROME_DRIVER_DOWNLOAD_URL, CHROME_DRIVER_DOWNLOAD_PARTITION
 
 def _get_chrome_version():
@@ -104,17 +107,23 @@ def _check_internet_connection() :
 
 def safeStart() :
 
+    print()
+
     for path in PRE_EXISTING_CHECKLIST :
         if not os.path.exists(path) :
             if os.path.splitext(path)[1] == "" :
                 print(colorama.Fore.RED, f"***LOG: The folder {path} was not found, creating...", colorama.Fore.RESET)
                 os.mkdir(path)
             else :
-                print(colorama.Fore.RED, f"***LOG: The file {path} was not found, creating...", colorama.Fore.RESET, )
+                print(colorama.Fore.RED, f"***LOG: The file {path} was not found, creating...", colorama.Fore.RESET)
                 with open(path, "w") as f :
                     f.write("")
-    
+
     print(colorama.Fore.GREEN, "***LOG: Pre-Existing-Checklist approved, continuing...", colorama.Fore.RESET)
+
+    print(colorama.Fore.BLUE, f"***LOG: The file {OUTPUT_JSON_FILE_PATH}, initializing...", colorama.Fore.RESET)
+    with open(OUTPUT_JSON_FILE_PATH, "w", encoding="utf-8") as f:
+        json.dump({"Date" : datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S"), "Creator" : platform.node()}, f, indent=4, ensure_ascii=False)
 
     if not _check_internet_connection() :
         print(colorama.Fore.RED, "***LOG: No internet connection found, terminating application...", colorama.Fore.RESET)
@@ -139,7 +148,7 @@ def safeStop() :
         for root, dirs, files in os.walk(folderPath):
             for dir in dirs :
                 if dir == "__pycache__" :
-                    print(colorama.Fore.BLUE, f"***LOG: Cache was found inside {folder}, it is being deleted.", colorama.Fore.RESET)
+                    print(colorama.Fore.BLUE, f"***LOG: Cache cleared -> ./{folder}...", colorama.Fore.RESET)
                     shutil.rmtree(os.path.join(root, dir))
 
     print(colorama.Fore.YELLOW, "***LOG: Application closed successfully !", colorama.Fore.RESET)
