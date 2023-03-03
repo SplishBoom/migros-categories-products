@@ -1,7 +1,12 @@
 from Utilities import Web, By, progressBar
 import json
-from Constants import OUTPUT_JSON_FILE_PATH
+from Constants import OUTPUT_JSON_FILE_PATH, OUTPUT_EXCEL_FILE_PATH, OUTPUT_CSV_FILE_PATH
 import colorama
+import pandas as pd
+import time
+
+df = pd.DataFrame(columns=["name", "link", "cat_1", "cat_2", "cat_3", "cat_4", "cat_5", "cat_6", "cat_7", "cat_8", "cat_9", "cat_10"])
+
 def _retrieve_main_categories(client) :
 
     browser = client
@@ -33,14 +38,50 @@ def _retrieve_main_categories(client) :
     return category_link_map
 
 def _retrieve_sub_category_list(name, link, client) :
-    catalog = {}
+    global df
 
+    catalog = {}
+    
     def update_catalog(lst):
         current_dict = catalog
         for item in lst:
             if item not in current_dict:
                 current_dict[item] = {}
             current_dict = current_dict[item]
+
+    def _get_products(cats, main_link, product_count) :
+        global df
+
+        browser = Web(isHidden=True)
+        browser.openWebPage(main_link)
+
+        cats = cats + [None] * (10 - len(cats))
+
+        if product_count > 30 :
+            button = browser.createElement("//*[@id=\"pagination-button-last\"]/span[2]")
+            browser.clickOnElement(button)
+            time.sleep(1)
+
+            last_page = browser.browser.current_url.split("=")[-1]
+
+            browser.openWebPage(main_link)
+        else :
+            last_page = 1
+
+        for i in range(1, int(last_page)+1):
+            products = browser.createElement("/html/body/sm-root/div/main/sm-product/article/sm-list/div/div[4]/div[2]/div[4]").find_elements(By.TAG_NAME, "sm-list-page-item")
+
+            for product in products:
+                splitted_name = product.text.split("\n")
+                name = splitted_name[0] if not splitted_name[0].startswith("%") else splitted_name[2]
+                link = product.find_element(By.TAG_NAME, "a").get_attribute("href")
+                df = pd.concat([df, pd.DataFrame([[name, link, *cats]], columns=["name", "link", "cat_1", "cat_2", "cat_3", "cat_4", "cat_5", "cat_6", "cat_7", "cat_8", "cat_9", "cat_10"])], ignore_index=True)
+                    
+            if product_count > 30 and i != int(last_page):
+                button = browser.createElement("//*[@id=\"pagination-button-next\"]")
+                browser.clickOnElement(button)
+
+        browser.terminate()
 
     temp = []
     def top_down_research(name, browser) :
@@ -56,13 +97,17 @@ def _retrieve_sub_category_list(name, link, client) :
                 current_path = temp
             else :
                 current_path = temp + [last_element_name]
-
+            last_elements_procudt_count = category_list[0].text[category_list[0].text.find("(")+1:category_list[0].text.find(")")]
             #print(colorama.Fore.GREEN, "Found: ", colorama.Fore.RESET, current_path)
 
             update_catalog(current_path)
 
-            #RETRIEVE PRODUCT LIST HERE
+            last_elements_link = category_list[0].find_element(By.TAG_NAME, "a").get_attribute("href")
 
+            try :
+                _get_products(current_path, last_elements_link, int(last_elements_procudt_count))
+            except :
+                print(colorama.Fore.BLACK, colorama.Back.RED, f"Error occured while getting products from: _get_products({current_path}{last_elements_link}{int(last_elements_procudt_count)})", colorama.Fore.RESET, current_path)
             return
 
         counter = 0
@@ -99,9 +144,8 @@ def _retrieve_sub_category_list(name, link, client) :
     with open(OUTPUT_JSON_FILE_PATH, "w", encoding="utf-8") as file :
         json.dump({**data, **catalog}, file, indent=4, ensure_ascii=False)
 
-    return catalog
-
 def scrapper() :
+    global df
 
     client = Web(isHidden=True)
 
@@ -109,9 +153,13 @@ def scrapper() :
 
     iterable = category_link_map.items()
     print(colorama.Fore.CYAN)
+    
     for name, link in progressBar(iterable, "Scrapping Progress", length=40) :
         _retrieve_sub_category_list(name, link, client)
         
+    df.to_excel(OUTPUT_EXCEL_FILE_PATH, index=False)
+    df.to_csv(OUTPUT_CSV_FILE_PATH, index=False)
+
     print(colorama.Fore.RESET)
 
     client.terminate()
