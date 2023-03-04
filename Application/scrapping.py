@@ -1,165 +1,197 @@
 from Utilities import Web, By, progressBar
 import json
-from Constants import OUTPUT_JSON_FILE_PATH, OUTPUT_EXCEL_FILE_PATH, OUTPUT_CSV_FILE_PATH
+from Constants import OUTPUT_JSON_FILE_PATH, OUTPUT_EXCEL_FILE_PATH, OUTPUT_CSV_FILE_PATH, connect_pathes
 import colorama
 import pandas as pd
 import time
+import multiprocessing
+from pprint import pprint
+import os
+from datetime import datetime
+import platform
 
-df = pd.DataFrame(columns=["name", "link", "cat_1", "cat_2", "cat_3", "cat_4", "cat_5", "cat_6", "cat_7", "cat_8", "cat_9", "cat_10"])
+import concurrent.futures
 
-def _retrieve_main_categories(client) :
 
-    browser = client
+class Scrapper :
 
-    main_url = "https://www.migros.com.tr/"
+    def __init__(self) -> None:
+        
+        self.category_mapping = {}
 
-    browser.openWebPage(main_url)
+        self._retrieve_category_list()
 
-    dummy = browser.createElement("//*[@id=\"header-money-discounts\"]")
-    browser.clickOnElement(dummy)
+        start = datetime.now()
 
-    dummy = browser.createElement("/html/body/sm-root/div/fe-product-cookie-indicator/div/div/button[1]")
-    browser.clickOnElement(dummy)
+        with concurrent.futures.ThreadPoolExecutor(max_workers=len(self.category_mapping)) as executor:
+            for name, link in self.category_mapping.items():
+                executor.map(self._retrieve_sub_category_list, [name], [link])
+        
+        src_fldr_path = connect_pathes("Temporary")
 
-    catagories_element = browser.createElement("//*[@id=\"header-wrapper\"]/div[3]/div/div")
-    browser.clickOnElement(catagories_element)
+        checked_folders = []
+        for folder in os.listdir(src_fldr_path):
+            checked_folders.append(folder)
 
-    all_category_elements = browser.createElement("//*[@id=\"header-wrapper\"]/div[3]/div[1]/div[2]/div[1]").find_elements(By.TAG_NAME, "a")
+        for name, link in self.category_mapping.items():
+            if name not in checked_folders:
+                print("Category " + name + " was not finalized in pool, starting again !")
+                self._retrieve_sub_category_list(name, link)
 
-    category_link_map = {}
-    exceptions = ("Tüm İndirimli Ürünler", "Sadece Migros'ta")
-    for current_catogory_element in all_category_elements :
-        category_name = current_catogory_element.text
-        category_link = current_catogory_element.get_attribute("href")
+        product_list_dataframe = pd.DataFrame(columns=["name", "link", "cat_1", "cat_2", "cat_3", "cat_4", "cat_5", "cat_6", "cat_7", "cat_8", "cat_9", "cat_10"])
 
-        if category_name not in exceptions :
-            category_link_map[category_name] = category_link
+        for folder in os.listdir(src_fldr_path):
+            for file in os.listdir(connect_pathes(src_fldr_path, folder)):
+                if file.endswith(".xlsx"):
+                    # use concat method to add new dataframe to existing dataframe
+                    product_list_dataframe = pd.concat([product_list_dataframe, pd.read_excel(connect_pathes(src_fldr_path, folder, file))], ignore_index=True)
 
-    return category_link_map
+        product_list_dataframe.to_excel(OUTPUT_EXCEL_FILE_PATH, index=False)
 
-def _retrieve_sub_category_list(name, link, client) :
-    global df
+        catalog_navigation = {}
 
-    catalog = {}
-    
-    def update_catalog(lst):
-        current_dict = catalog
-        for item in lst:
-            if item not in current_dict:
-                current_dict[item] = {}
-            current_dict = current_dict[item]
+        for folder in os.listdir(src_fldr_path):
+            for file in os.listdir(connect_pathes(src_fldr_path, folder)):
+                if file.endswith(".json"):
+                    with open(connect_pathes(src_fldr_path, folder, file), "r", encoding="utf-8") as f:
+                        catalog_navigation.update(json.load(f))
 
-    def _get_products(cats, main_link, product_count) :
-        global df
+        with open(OUTPUT_JSON_FILE_PATH, "w", encoding="utf-8") as f:
+            json.dump(catalog_navigation, f, indent=4, ensure_ascii=False)
 
-        browser = Web(isHidden=True)
-        browser.openWebPage(main_link)
-
-        cats = cats + [None] * (10 - len(cats))
-
-        if product_count > 30 :
-            button = browser.createElement("//*[@id=\"pagination-button-last\"]/span[2]")
-            browser.clickOnElement(button)
-            time.sleep(1)
-
-            last_page = browser.browser.current_url.split("=")[-1]
-
-            browser.openWebPage(main_link)
-        else :
-            last_page = 1
-
-        for i in range(1, int(last_page)+1):
-            products = browser.createElement("/html/body/sm-root/div/main/sm-product/article/sm-list/div/div[4]/div[2]/div[4]").find_elements(By.TAG_NAME, "sm-list-page-item")
-
-            for product in products:
-                splitted_name = product.text.split("\n")
-                name = splitted_name[0] if not splitted_name[0].startswith("%") else splitted_name[2]
-                link = product.find_element(By.TAG_NAME, "a").get_attribute("href")
-                df = pd.concat([df, pd.DataFrame([[name, link, *cats]], columns=["name", "link", "cat_1", "cat_2", "cat_3", "cat_4", "cat_5", "cat_6", "cat_7", "cat_8", "cat_9", "cat_10"])], ignore_index=True)
-                    
-            if product_count > 30 and i != int(last_page):
-                button = browser.createElement("//*[@id=\"pagination-button-next\"]")
-                browser.clickOnElement(button)
-
-        browser.terminate()
-
-    temp = []
-    def top_down_research(name, browser) :
-
-        temp.append(name)
-
-        category_list = browser.createElement("/html/body/sm-root/div/main/sm-product/article/sm-list/div/div[4]/div[1]/sm-product-filters-desktop/div/div[2]/div[2]").find_elements(By.TAG_NAME, "div")
-        if len(category_list) == 1:
-
-            last_element_name = category_list[0].text[0:category_list[0].text.find("(")].strip()
-            owner_name = name
-            if last_element_name == owner_name :
-                current_path = temp
-            else :
-                current_path = temp + [last_element_name]
-            last_elements_procudt_count = category_list[0].text[category_list[0].text.find("(")+1:category_list[0].text.find(")")]
-            #print(colorama.Fore.GREEN, "Found: ", colorama.Fore.RESET, current_path)
-
-            update_catalog(current_path)
-
-            last_elements_link = category_list[0].find_element(By.TAG_NAME, "a").get_attribute("href")
-
-            try :
-                _get_products(current_path, last_elements_link, int(last_elements_procudt_count))
-            except :
-                print(colorama.Fore.BLACK, colorama.Back.RED, f"Error occured while getting products from: _get_products({current_path}{last_elements_link}{int(last_elements_procudt_count)})", colorama.Fore.RESET, current_path)
-            return
-
-        counter = 0
-
-        while counter < len(category_list) : 
-
-            try :
-                current_sub_category = browser.createElement("/html/body/sm-root/div/main/sm-product/article/sm-list/div/div[4]/div[1]/sm-product-filters-desktop/div/div[2]/div[2]").find_elements(By.TAG_NAME, "div")[counter]
-
-                sub_catagory_name = current_sub_category.text[0:current_sub_category.text.find("(")].strip()
-                sub_catagory_link = current_sub_category.find_element(By.TAG_NAME, "a").get_attribute("href")
-                sub_category_product_count = current_sub_category.text[current_sub_category.text.find("(")+1:current_sub_category.text.find(")")]
-            except :
-                #print(colorama.Fore.BLACK, colorama.Back.RED, f"***ERROR: Couldn't resolve the element of {name}, {category_list[counter]}", colorama.Fore.RESET, colorama.Back.RESET)
-                counter = counter + 1
-                continue
+        end = datetime.now()
+        print("Total time: " + str(end - start))
             
-            browser.openWebPage(sub_catagory_link)
+    def _retrieve_category_list(self) :
 
-            top_down_research(sub_catagory_name, browser)
+        client = Web()
 
-            counter = counter + 1
+        web_page_link = "https://www.migros.com.tr/"
 
-            browser.browser.back()
-            temp.pop()
-        
-    browser = client
-    browser.openWebPage(link)
+        client.open_web_page(web_page_link)
 
-    top_down_research(name, browser)
+        pop_up_deleter = client.create_element("//*[@id=\"header-money-discounts\"]")
+        client.click_on_element(pop_up_deleter)
 
-    with open(OUTPUT_JSON_FILE_PATH, "r", encoding="utf-8") as file :
-        data = json.load(file)
-    with open(OUTPUT_JSON_FILE_PATH, "w", encoding="utf-8") as file :
-        json.dump({**data, **catalog}, file, indent=4, ensure_ascii=False)
+        pop_up_deleter = client.create_element("/html/body/sm-root/div/fe-product-cookie-indicator/div/div/button[1]")
+        client.click_on_element(pop_up_deleter)
 
-def scrapper() :
-    global df
+        catagories_element = client.create_element("//*[@id=\"header-wrapper\"]/div[3]/div/div")
+        client.click_on_element(catagories_element)
 
-    client = Web(isHidden=True)
+        all_category_elements = client.create_element("//*[@id=\"header-wrapper\"]/div[3]/div[1]/div[2]/div[1]").find_elements(By.TAG_NAME, "a")
 
-    category_link_map = _retrieve_main_categories(client)
+        exceptions = ("Tüm İndirimli Ürünler", "Sadece Migros'ta")
+        for current_catogory_element in all_category_elements :
+            category_name = current_catogory_element.text
+            category_link = current_catogory_element.get_attribute("href")
 
-    iterable = category_link_map.items()
-    print(colorama.Fore.CYAN)
-    
-    for name, link in progressBar(iterable, "Scrapping Progress", length=40) :
-        _retrieve_sub_category_list(name, link, client)
-        
-    df.to_excel(OUTPUT_EXCEL_FILE_PATH, index=False)
-    df.to_csv(OUTPUT_CSV_FILE_PATH, index=False)
+            if category_name not in exceptions :
+                self.category_mapping[category_name] = category_link
 
-    print(colorama.Fore.RESET)
+    def _retrieve_sub_category_list(self, name, link) :
 
-    client.terminate()
+        print("Category " + name + " has been started.")
+
+        temporary_navigation = []
+        navigation_catalog = {}
+        products_list = []
+
+        def _update_catalog(addition_list):
+            refenence_var = navigation_catalog
+            for item in addition_list:
+                if item not in refenence_var:
+                    refenence_var[item] = {}
+                refenence_var = refenence_var[item]
+
+        def _get_products(category_cats, category_link, category_product_count) :
+
+            product_browser = Web()
+            product_browser.open_web_page(category_link)
+
+            category_cats = category_cats + [None] * (10 - len(category_cats))
+
+            if category_product_count > 30 :
+                latest_page_move = product_browser.create_element("//*[@id=\"pagination-button-last\"]/span[2]")
+                product_browser.click_on_element(latest_page_move)
+                time.sleep(1)
+                last_page = product_browser.browser.current_url.split("=")[-1]
+                product_browser.open_web_page(category_link)
+            else :
+                last_page = 1
+
+            for i in range(1, int(last_page)+1):
+                products = product_browser.create_element("/html/body/sm-root/div/main/sm-product/article/sm-list/div/div[4]/div[2]/div[4]").find_elements(By.TAG_NAME, "sm-list-page-item")
+
+                for product in products:
+                    splitted_name = product.text.split("\n")
+                    name = splitted_name[0] if not splitted_name[0].startswith("%") else splitted_name[2]
+                    link = product.find_element(By.TAG_NAME, "a").get_attribute("href")
+                    products_list.append([name, link, *category_cats])
+
+                if category_product_count > 30 and i != int(last_page):
+                    latest_page_move = product_browser.create_element("//*[@id=\"pagination-button-next\"]")
+                    product_browser.click_on_element(latest_page_move)
+
+            product_browser.terminate_client()
+
+        def _top_down_research(name, browser) :
+
+            temporary_navigation.append(name)
+
+            category_list = browser.create_element("/html/body/sm-root/div/main/sm-product/article/sm-list/div/div[4]/div[1]/sm-product-filters-desktop/div/div[2]/div[2]").find_elements(By.TAG_NAME, "div")
+            if len(category_list) == 1:
+                last_element_name = category_list[0].text[0:category_list[0].text.find("(")].strip()
+                owner_name = name
+                if last_element_name == owner_name :
+                    current_path = temporary_navigation
+                else :
+                    current_path = temporary_navigation + [last_element_name]
+                print(current_path)
+                _update_catalog(current_path)
+
+                last_elements_procudt_count = category_list[0].text[category_list[0].text.find("(")+1:category_list[0].text.find(")")]
+                last_elements_link = category_list[0].find_element(By.TAG_NAME, "a").get_attribute("href")
+
+                _get_products(current_path, last_elements_link, int(last_elements_procudt_count))
+                
+                return
+                
+            counter = 0
+            while counter < len(category_list) : 
+                try :
+                    current_sub_category = browser.create_element("/html/body/sm-root/div/main/sm-product/article/sm-list/div/div[4]/div[1]/sm-product-filters-desktop/div/div[2]/div[2]").find_elements(By.TAG_NAME, "div")[counter]
+                    sub_catagory_name = current_sub_category.text[0:current_sub_category.text.find("(")].strip()
+                    sub_catagory_link = current_sub_category.find_element(By.TAG_NAME, "a").get_attribute("href")
+                except :
+                    counter = counter + 1
+                    continue
+                browser.open_web_page(sub_catagory_link)
+                _top_down_research(sub_catagory_name, browser)
+                counter = counter + 1
+                browser.go_back()
+                temporary_navigation.pop()
+
+        client = Web()
+        client.open_web_page(link)
+
+        pop_up_deleter = client.create_element("/html/body/sm-root/div/fe-product-cookie-indicator/div/div/button[1]")
+        client.click_on_element(pop_up_deleter)
+
+        _top_down_research(name, client)
+
+        client.terminate_client()
+
+        os.makedirs(connect_pathes("Temporary", name), exist_ok=True)
+
+        json_output_path = connect_pathes("Temporary", name, name + ".json")
+        with open(json_output_path, "w", encoding="utf-8") as json_file:
+            json.dump(navigation_catalog, json_file, ensure_ascii=False, indent=4)
+
+        product_list_data_frame = pd.concat([pd.DataFrame([row], columns=["name", "link", "cat_1", "cat_2", "cat_3", "cat_4", "cat_5", "cat_6", "cat_7", "cat_8", "cat_9", "cat_10"]) for row in products_list], ignore_index=True)
+        csv_output_path = connect_pathes("Temporary", name, name + ".csv")
+        product_list_data_frame.to_csv(csv_output_path, index=False)
+        excel_output_path = connect_pathes("Temporary", name, name + ".xlsx")
+        product_list_data_frame.to_excel(excel_output_path, index=False)
+
+        print("Category " + name + " has been processed. And the results are saved in " + connect_pathes("Temporary", name))

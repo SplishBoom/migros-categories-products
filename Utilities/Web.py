@@ -8,7 +8,7 @@ from Constants import CHROME_DRIVER_PATH
 
 class Web :
 
-    def __init__(self, driver_path=CHROME_DRIVER_PATH, isHidden=False) :
+    def __init__(self, driver_path=CHROME_DRIVER_PATH, isHidden=True) :
 
         os.chmod(driver_path, 755)
 
@@ -26,13 +26,16 @@ class Web :
 
         self.browser.maximize_window()
 
-    def openWebPage(self,url) :
+    def open_web_page(self,url) :
         self.browser.get(url)
 
-    def terminate(self) :
+    def go_back(self) :
+        self.browser.back()
+
+    def terminate_client(self) :
         self.browser.quit()
 
-    def createElement(self,xPath) :
+    def create_element(self,xPath) :
         createdElement = None
         while (createdElement == None) :
             try :
@@ -41,7 +44,7 @@ class Web :
                 continue
         return createdElement
 
-    def clickOnElement(self, element) :
+    def click_on_element(self, element) :
         while (True) :
             try :
                 element.click()

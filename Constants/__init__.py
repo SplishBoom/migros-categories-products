@@ -6,7 +6,7 @@ from Constants.path_track import (
     PRE_EXISTING_CHECKLIST,
     OUTPUT_JSON_FILE_PATH,
     OUTPUT_EXCEL_FILE_PATH,
-    OUTPUT_CSV_FILE_PATH,
+    OUTPUT_CSV_FILE_PATH
 )
 
 from Constants.url_track import (
