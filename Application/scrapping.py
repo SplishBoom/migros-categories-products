@@ -38,7 +38,7 @@ class Scrapper :
                 print("Category " + name + " was not finalized in pool, starting again !")
                 self._retrieve_sub_category_list(name, link)
 
-        product_list_dataframe = pd.DataFrame(columns=["name", "link", "cat_1", "cat_2", "cat_3", "cat_4", "cat_5", "cat_6", "cat_7", "cat_8", "cat_9", "cat_10"])
+        product_list_dataframe = pd.DataFrame(columns=["name", "type", "link", "cat_1", "cat_2", "cat_3", "cat_4", "cat_5", "cat_6", "cat_7", "cat_8", "cat_9", "cat_10"])
 
         for folder in os.listdir(src_fldr_path):
             for file in os.listdir(connect_pathes(src_fldr_path, folder)):
@@ -96,6 +96,9 @@ class Scrapper :
         temporary_navigation = []
         navigation_catalog = {}
         products_list = []
+        typo_list = []
+        product_browser = Web()
+        typo_browser = Web()
 
         def _update_catalog(addition_list):
             refenence_var = navigation_catalog
@@ -106,7 +109,6 @@ class Scrapper :
 
         def _get_products(category_cats, category_link, category_product_count) :
 
-            product_browser = Web()
             product_browser.open_web_page(category_link)
 
             category_cats = category_cats + [None] * (10 - len(category_cats))
@@ -132,8 +134,6 @@ class Scrapper :
                 if category_product_count > 30 and i != int(last_page):
                     latest_page_move = product_browser.create_element("//*[@id=\"pagination-button-next\"]")
                     product_browser.click_on_element(latest_page_move)
-
-            product_browser.terminate_client()
 
         def _top_down_research(name, browser) :
 
@@ -172,6 +172,85 @@ class Scrapper :
                 browser.go_back()
                 temporary_navigation.pop()
 
+        def _get_types(category_name, category_link) :
+
+            def get_typos() :
+
+                browser = typo_browser
+
+                time.sleep(1)
+                filters = browser.create_element("/html/body/sm-root/div/main/sm-product/article/sm-list/div/div[4]/div[1]/sm-product-filters-desktop/div")
+
+                ng_stars = filters.find_elements(By.CLASS_NAME, "ng-star-inserted")
+
+                typos_container = None
+                for ng_star in ng_stars :
+                    try :
+                        if ng_star.find_element(By.CLASS_NAME, "subtitle-1").text == "Türü" :
+                            typos_container = ng_star
+                    except :
+                        continue
+
+                if typos_container is None :
+                    return
+                
+                typos = typos_container.find_elements(By.CLASS_NAME, "ng-star-inserted")
+
+                return typos
+
+            def _get_typod_products(category_product_count, category_link, typo) :
+
+                product_browser = typo_browser
+
+                if category_product_count > 30 :
+                    latest_page_move = product_browser.create_element("//*[@id=\"pagination-button-last\"]")
+                    product_browser.click_on_element(latest_page_move)
+                    time.sleep(1)
+                    url = product_browser.browser.current_url
+                    last_page = url[url.find("sayfa=")+6:url.find("&")]
+                    product_browser.open_web_page(category_link)
+                else :
+                    last_page = 1
+
+                for i in range(1, int(last_page)+1):
+                    products = product_browser.create_element("/html/body/sm-root/div/main/sm-product/article/sm-list/div/div[4]/div[2]/div[4]").find_elements(By.TAG_NAME, "sm-list-page-item")
+
+                    for product in products:
+                        splitted_name = product.text.split("\n")
+                        name = splitted_name[0] if not splitted_name[0].startswith("%") else splitted_name[2]
+                        typo_list.append([name, typo])
+
+                    if category_product_count > 30 and i != int(last_page):
+                        latest_page_move = product_browser.create_element("//*[@id=\"pagination-button-next\"]")
+                        product_browser.click_on_element(latest_page_move)
+
+            browser = typo_browser
+
+            browser.open_web_page(category_link)
+
+            pop_up_deleter = browser.create_element("/html/body/sm-root/div/fe-product-cookie-indicator/div/div/button[1]")
+            browser.click_on_element(pop_up_deleter)
+            
+            try :
+                typo_count = len(get_typos())
+            except :
+                print("No typo for " + category_name + " category")
+                return
+
+            for current_typo_no in range(typo_count) :
+
+                browser.open_web_page(category_link)
+
+                typo = get_typos()[current_typo_no]
+
+                text = typo.text
+                typos_name = text[0:text.find("(")-1]
+                typos_product_count = text[text.find("(")+1:text.find(")")]
+                typo_link = typo.find_element(By.CLASS_NAME, "mdc-checkbox")
+                typo_link.click()
+
+                _get_typod_products(int(typos_product_count), category_link, typos_name)
+
         client = Web()
         client.open_web_page(link)
 
@@ -180,7 +259,26 @@ class Scrapper :
 
         _top_down_research(name, client)
 
+        _get_types(name, link)
+
+        typo_browser.terminate_client()
+        product_browser.terminate_client()
         client.terminate_client()
+
+        merged_list = []
+
+        for l1 in products_list:
+            is_matched = False
+            for l2 in typo_list:
+                if l1[0] == l2[0]:
+                    _type = l2[1]
+                    l1.insert(1, _type)
+                    merged_list.append(l1)
+                    is_matched = True
+                    break
+            if not is_matched:
+                l1.insert(1, None)
+                merged_list.append(l1)
 
         os.makedirs(connect_pathes("Temporary", name), exist_ok=True)
 
@@ -188,7 +286,7 @@ class Scrapper :
         with open(json_output_path, "w", encoding="utf-8") as json_file:
             json.dump(navigation_catalog, json_file, ensure_ascii=False, indent=4)
 
-        product_list_data_frame = pd.concat([pd.DataFrame([row], columns=["name", "link", "cat_1", "cat_2", "cat_3", "cat_4", "cat_5", "cat_6", "cat_7", "cat_8", "cat_9", "cat_10"]) for row in products_list], ignore_index=True)
+        product_list_data_frame = pd.concat([pd.DataFrame([row], columns=["name", "type", "link", "cat_1", "cat_2", "cat_3", "cat_4", "cat_5", "cat_6", "cat_7", "cat_8", "cat_9", "cat_10"]) for row in merged_list], ignore_index=True)
         csv_output_path = connect_pathes("Temporary", name, name + ".csv")
         product_list_data_frame.to_csv(csv_output_path, index=False)
         excel_output_path = connect_pathes("Temporary", name, name + ".xlsx")
