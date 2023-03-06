@@ -120,10 +120,6 @@ def safeStart() :
 
     print(colorama.Fore.GREEN, "***LOG: Pre-Existing-Checklist approved, continuing...", colorama.Fore.RESET)
 
-    print(colorama.Fore.BLUE, f"***LOG: The file {OUTPUT_JSON_FILE_PATH}, initializing...", colorama.Fore.RESET)
-    with open(OUTPUT_JSON_FILE_PATH, "w", encoding="utf-8") as f:
-        json.dump({"Date" : datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S"), "Creator" : pltmr.node()}, f, indent=4, ensure_ascii=False)
-
     if not _check_internet_connection() :
         print(colorama.Fore.RED, "***LOG: No internet connection found, terminating application...", colorama.Fore.RESET)
         exit()
