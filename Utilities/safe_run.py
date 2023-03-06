@@ -1,21 +1,36 @@
-from    sys                 import platform
-from    bs4                 import BeautifulSoup
+"""
+This script is used for execution safety of the program.
+"""
+
+from    Constants   import connect_urls, CONNECTION_TEST_URL, CHROME_DRIVER_DOWNLOAD_URL, CHROME_DRIVER_DOWNLOAD_PARTITION
+from    Constants   import CHROME_DRIVER_PATH, CACHED_FOLDER_LIST, PRE_EXISTING_CHECKLIST
+from    bs4         import BeautifulSoup
+from    sys         import platform
 import  requests
+import  colorama
 import  zipfile
+import  shutil
 import  os
 import  io
-import  shutil
-import  colorama
 import  re
-import  json
-import  datetime
-import  platform as pltmr
 
-from Constants import connect_pathes, OUTPUT_JSON_FILE_PATH, CHROME_DRIVER_PATH, CACHED_FOLDER_LIST, CHROME_DRIVER_APPLICATION_DISPATCH, PRE_EXISTING_CHECKLIST
-from Constants import connect_urls, CONNECTION_TEST_URL, CHROME_DRIVER_DOWNLOAD_URL, CHROME_DRIVER_DOWNLOAD_PARTITION
+def _get_chrome_version() -> str:
+    """
+    Private Method, that gets the chrome version.
+    @Params:
+        - None
+    @Return:
+        - str : Chrome version.
+    """
 
-def _get_chrome_version():
-    def _extract_version_folder():
+    def _extract_version_folder() -> str:
+        """
+        Private Method, that extracts the chrome version from the folder.
+        @Params:
+            - None
+        @Return:
+            - str : Chrome version.
+        """
         # Check if the Chrome folder exists in the x32 or x64 Program Files folders.
         for i in range(2):
             path = 'C:\\Program Files' + (' (x86)' if i else '') +'\\Google\\Chrome\\Application'
@@ -30,7 +45,14 @@ def _get_chrome_version():
                         return match.group(0)
         return None
     
-    def _extract_version_registry(output):
+    def _extract_version_registry(output) -> str:
+        """
+        Private Method, that extracts the chrome version from the registry.
+        @Params:
+            - None
+        @Return:
+            - str : Chrome version.
+        """
         try:
             google_version = ''
             for letter in output[output.rindex('DisplayVersion    REG_SZ') + 24:]:
@@ -73,7 +95,14 @@ def _get_chrome_version():
 
     return version
 
-def _load_chrome_driver() :
+def _load_chrome_driver() -> None:
+    """
+    Private Method, that loads the chrome driver.
+    @Params:
+        - None
+    @Return:
+        - None
+    """
     
     version_base = _get_chrome_version()
 
@@ -97,14 +126,28 @@ def _load_chrome_driver() :
     zipFile = zipfile.ZipFile(io.BytesIO(download_response.content))
     zipFile.extractall("Sources")
 
-def _check_internet_connection() :
+def _check_internet_connection() -> bool :
+    """
+    Private Method, that checks if the internet connection is available.
+    @Params:
+        - None
+    @Return:
+        - bool : True if internet connection is available, False otherwise.
+    """
     try :
         requests.get(CONNECTION_TEST_URL)
         return True
     except :
         return False
 
-def safeStart() :
+def safeStart() -> None:
+    """
+    Public Method, that checks if the program can be started.
+    @Params:
+        - None
+    @Return:
+        - None
+    """
 
     print()
 
@@ -134,7 +177,14 @@ def safeStart() :
 
     print(colorama.Fore.YELLOW, "***LOG: Application started successfully !", colorama.Fore.RESET)
 
-def safeStop() :
+def safeStop() -> None:
+    """
+    Public Method, that checks if the program can be stopped.
+    @Params:
+        - None
+    @Return:
+        - None
+    """
 
     projectDir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -147,4 +197,5 @@ def safeStop() :
                     shutil.rmtree(os.path.join(root, dir))
 
     print(colorama.Fore.YELLOW, "***LOG: Application closed successfully !", colorama.Fore.RESET)
+    
     exit()

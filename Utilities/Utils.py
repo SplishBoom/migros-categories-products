@@ -1,14 +1,20 @@
+"""
+This script is used for handling utilitiy functions.
+"""
+
 def progressBar(iterable, prefix = '', suffix = '', decimals = 1, length = 100, fill = '█', printEnd = "\r") -> None:
     """
-    Call in a loop to create terminal progress bar
-    @params:
-        iterable    - Required  :   iterable object (Iterable)
-        prefix      - Optional  :   prefix string (Str)
-        suffix      - Optional  :   suffix string (Str)
-        decimals    - Optional  :   positive number of decimals in percent complete (Int)
-        length      - Optional  :   character length of bar (Int)
-        fill        - Optional  :   bar fill character (Str)
-        printEnd    - Optional  :   end character (e.g. "\r", "\r\n") (Str)
+    Method, that should be called in a loop to create terminal progress bar
+    @Params:
+        - iterable - (Required) : iterable object (Iterable)
+        - prefix   - (Optional) : prefix string (Str)
+        - suffix   - (Optional) : suffix string (Str)
+        - decimals - (Optional) : positive number of decimals in percent complete (Int)
+        - length   - (Optional) : character length of bar (Int)
+        - fill     - (Optional) : bar fill character (Str)
+        - printEnd - (Optional) : end character (e.g. "\r", "\r\n") (Str)
+    @Return:
+        - None
     """
     total = len(iterable)
     # Progress Bar Printing Function

@@ -1,21 +1,30 @@
-from Utilities import Web, By, progressBar
-import json
-from Constants import OUTPUT_JSON_FILE_PATH, OUTPUT_EXCEL_FILE_PATH, OUTPUT_CSV_FILE_PATH, connect_pathes
-import colorama
-import pandas as pd
-import time
-import multiprocessing
-from pprint import pprint
-import os
-from datetime import datetime
-import platform
+"""
+Script that is used to scrape the data from the website.
+"""
 
+from Constants  import OUTPUT_JSON_FILE_PATH, OUTPUT_EXCEL_FILE_PATH, OUTPUT_CSV_FILE_PATH, connect_pathes
+from platform   import node as get_hostname
+from Utilities  import Web, By, progressBar
+from datetime   import datetime
+import pandas   as pd
 import concurrent.futures
-
+import json
+import time
+import os
 
 class Scrapper :
+    """
+    Class, that scrapes the data from the website. With constructor initilization and multitasking.
+    """
 
     def __init__(self) -> None:
+        """
+        Constructor, that initializes the class, and executes the scrapping.
+        @Params:
+            - None
+        @Return:
+            - None
+        """
         
         self.category_mapping = {}
 
@@ -43,10 +52,18 @@ class Scrapper :
         for folder in os.listdir(src_fldr_path):
             for file in os.listdir(connect_pathes(src_fldr_path, folder)):
                 if file.endswith(".xlsx"):
-                    # use concat method to add new dataframe to existing dataframe
                     product_list_dataframe = pd.concat([product_list_dataframe, pd.read_excel(connect_pathes(src_fldr_path, folder, file))], ignore_index=True)
 
         product_list_dataframe.to_excel(OUTPUT_EXCEL_FILE_PATH, index=False)
+
+        product_list_csv_dataframe = pd.DataFrame(columns=["name", "type", "link", "cat_1", "cat_2", "cat_3", "cat_4", "cat_5", "cat_6", "cat_7", "cat_8", "cat_9", "cat_10"])
+
+        for folder in os.listdir(src_fldr_path):
+            for file in os.listdir(connect_pathes(src_fldr_path, folder)):
+                if file.endswith(".csv"):
+                    product_list_csv_dataframe = pd.concat([product_list_csv_dataframe, pd.read_csv(connect_pathes(src_fldr_path, folder, file))], ignore_index=True)
+
+        product_list_csv_dataframe.to_csv(OUTPUT_CSV_FILE_PATH, index=False)
 
         catalog_navigation = {}
 
@@ -56,13 +73,33 @@ class Scrapper :
                     with open(connect_pathes(src_fldr_path, folder, file), "r", encoding="utf-8") as f:
                         catalog_navigation.update(json.load(f))
 
+        end = datetime.now()
+
+        info_label = {
+            "Executer" : get_hostname(),
+            "Start Time" : str(start),
+            "End Time" : str(end),
+            "Estimated Time" : str(end - start)
+        }
+
+        sv = catalog_navigation
+        catalog_navigation = info_label
+        catalog_navigation.update(sv)
+        
         with open(OUTPUT_JSON_FILE_PATH, "w", encoding="utf-8") as f:
             json.dump(catalog_navigation, f, indent=4, ensure_ascii=False)
 
         end = datetime.now()
         print("Total time: " + str(end - start))
             
-    def _retrieve_category_list(self) :
+    def _retrieve_category_list(self) -> None:
+        """
+        Private Class Method, that retrieves the category list from the website.
+        @Params:
+            - None
+        @Return:
+            - None
+        """
 
         client = Web()
 
@@ -89,7 +126,15 @@ class Scrapper :
             if category_name not in exceptions :
                 self.category_mapping[category_name] = category_link
 
-    def _retrieve_sub_category_list(self, name, link) :
+    def _retrieve_sub_category_list(self, name, link) -> None:
+        """
+        Private Class Method, that retrieves the sub category list from the website.
+        @Params:
+            - name : (Required) - The name of the category. (str)
+            - link : (Required) - The link of the category. (str)
+        @Return:
+            - None
+        """
 
         print("Category " + name + " has been started.")
 
@@ -100,14 +145,30 @@ class Scrapper :
         product_browser = Web()
         typo_browser = Web()
 
-        def _update_catalog(addition_list):
+        def _update_catalog(addition_list) -> None:
+            """
+            Private Method, that updates the catalog.
+            @Params:
+                - addition_list : (Required) - The list of the additions. (list)
+            @Return:
+                - None
+            """
             refenence_var = navigation_catalog
             for item in addition_list:
                 if item not in refenence_var:
                     refenence_var[item] = {}
                 refenence_var = refenence_var[item]
 
-        def _get_products(category_cats, category_link, category_product_count) :
+        def _get_products(category_cats, category_link, category_product_count) -> None:
+            """
+            Private Method, that retrieves the products from the website.
+            @Params:
+                - category_cats : (Required) - The list of the categories. (list)
+                - category_link : (Required) - The link of the category. (str)
+                - category_product_count : (Required) - The number of the products in the category. (int)
+            @Return:
+                - None
+            """
 
             product_browser.open_web_page(category_link)
 
@@ -135,7 +196,15 @@ class Scrapper :
                     latest_page_move = product_browser.create_element("//*[@id=\"pagination-button-next\"]")
                     product_browser.click_on_element(latest_page_move)
 
-        def _top_down_research(name, browser) :
+        def _top_down_research(name, browser) -> None:
+            """
+            RECURSIVE - Private Method, that retrieves the sub categories from the website.
+            @Params:
+                - name : (Required) - The name of the category. (str)
+                - browser : (Required) - The browser object. (Web)
+            @Return:
+                - None
+            """
 
             temporary_navigation.append(name)
 
@@ -172,9 +241,24 @@ class Scrapper :
                 browser.go_back()
                 temporary_navigation.pop()
 
-        def _get_types(category_name, category_link) :
+        def _get_types(category_name, category_link) -> None:
+            """
+            Private Method, that retrieves the types from the website.
+            @Params:
+                - category_name : (Required) - The name of the category. (str)
+                - category_link : (Required) - The link of the category. (str)
+            @Return:
+                - None
+            """
 
-            def get_typos() :
+            def get_typos() -> list:
+                """
+                Private Method, that retrieves the typos from the website.
+                @Params:
+                    - None
+                @Return:
+                    - typos : (Required) - The list of the typos. (list)
+                """
 
                 browser = typo_browser
 
@@ -198,7 +282,16 @@ class Scrapper :
 
                 return typos
 
-            def _get_typod_products(category_product_count, category_link, typo) :
+            def _get_typod_products(category_product_count, category_link, typo) -> None:
+                """
+                Private Method, that retrieves the products from the website.
+                @Params:
+                    - category_product_count : (Required) - The product count of the category. (int)
+                    - category_link : (Required) - The link of the category. (str)
+                    - typo : (Required) - The typo of the category. (str)
+                @Return:
+                    - None
+                """
 
                 product_browser = typo_browser
 

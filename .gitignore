@@ -12,6 +12,7 @@ Sources/
 # Otuput Folder
 Data Export/
 Temporary/
+Temp/
 
 *.json
 

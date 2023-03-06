@@ -1,6 +1,17 @@
+"""
+Script to track the pathes of the files and folders used in the project.
+"""
+
 import os
 
-def connect_pathes(*pathes):
+def connect_pathes(*pathes) -> str:
+    """
+    Public Method, that connects the pathes.
+    @Params:
+        - pathes : (Required) : Pathes to be connected.
+    @Return:
+        - str : Connected pathes.
+    """
     return os.path.join(*pathes)
 
 PRE_EXISTING_CHECKLIST = ["Temporary", "Sources", "Data Export"]
