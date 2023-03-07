@@ -1,0 +1,17 @@
+{
+    "Pet Shop": {
+        "Kedi": {
+            "Kedi Maması": {},
+            "Kedi Kumu": {},
+            "Kedi Ödül Maması": {}
+        },
+        "Köpek": {
+            "Köpek Maması": {},
+            "Köpek Ödül Maması": {}
+        },
+        "Kuş": {
+            "Kuş Yemi": {}
+        },
+        "Pet Aksesuarları": {}
+    }
+}

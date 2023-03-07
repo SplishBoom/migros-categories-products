@@ -1,0 +1,1324 @@
+{
+    "Executer": "ECM-WINDOWS",
+    "Start Time": "2023-03-07 02:37:03.740249",
+    "End Time": "2023-03-07 03:01:36.677230",
+    "Estimated Time": "0:24:32.936981",
+    "Atıştırmalık": {
+        "Çikolata": {
+            "Sütlü Çikolata": {},
+            "Hediye Çikolata": {},
+            "Bitter Çikolata": {},
+            "Draje Çikolata": {},
+            "Çocuk Çikolata": {},
+            "Beyaz Çikolata": {},
+            "Oyuncaklı Çikolata": {}
+        },
+        "Kuruyemiş": {
+            "Karışık Kuruyemiş": {},
+            "Antep Fıstığı": {},
+            "Fındık": {},
+            "Ayçekirdeği": {},
+            "Fıstık": {},
+            "Badem": {},
+            "Kaju": {},
+            "Leblebi": {},
+            "Kabak Çekirdeği": {},
+            "Diğer Kuruyemiş": {},
+            "Soslu Mısır": {}
+        },
+        "Bisküvi": {
+            "Kremalı Bisküvi": {},
+            "Kaplamalı Bisküvi": {},
+            "Tahıllı Bisküvi": {},
+            "Petibör": {},
+            "Bebe Bisküvisi": {},
+            "Form Bisküvi": {},
+            "Bisküvi Tatlı": {}
+        },
+        "Cips": {
+            "Patates Cipsi": {},
+            "Mısır Cipsi": {},
+            "Mısır Çerezi": {},
+            "Patlamış Mısır": {},
+            "Pelet Ve Diğer Cips": {},
+            "Meyve, Sebze Cipsi": {},
+            "Cips Sosu": {}
+        },
+        "Kuru Meyve": {
+            "Diğer Kuru Meyve": {},
+            "Ceviz İçi": {},
+            "Kuru Kayısı": {},
+            "Badem Çiğ": {},
+            "Kuru Üzüm": {},
+            "Karışık Çiğ": {},
+            "Hurma": {},
+            "Fındık Çiğ": {},
+            "Kuru İncir": {},
+            "Kuru Erik": {},
+            "Dut Kurusu": {}
+        },
+        "Bar, Kaplamalılar": {
+            "Meyve Bar": {},
+            "Çikolata Bar": {},
+            "Tahıllı Bar": {},
+            "Protein Bar": {},
+            "Krokan": {}
+        },
+        "Kek": {
+            "Mini Kek": {},
+            "Baton Kek": {},
+            "Tart": {},
+            "Kruvasan": {}
+        },
+        "Gofret": {
+            "Çikolatalı Gofret": {},
+            "Wafer Gofret": {},
+            "Rulo Gofret": {}
+        },
+        "Sakız": {},
+        "Kraker": {},
+        "Şekerleme": {
+            "Yumuşak Şeker": {},
+            "Draje Şekerleme": {},
+            "Lokum": {},
+            "Geleneksel Şekerleme": {},
+            "Çikolata Dökme": {}
+        }
+    },
+    "Bebek": {
+        "Bebek Bezi": {
+            "Bebek Bezleri": {},
+            "Külot Bez": {},
+            "Bebek Bakım Örtüsü": {}
+        },
+        "Bebek Beslenme": {
+            "Bebek Maması": {
+                "Devam Sütü": {},
+                "Kaşık Maması": {},
+                "Kavanoz Mama": {}
+            },
+            "Bebek Atıştırmalık": {},
+            "Bebek Beslenme Araçları": {
+                "Biberon": {},
+                "Bebek Yemek Gereçleri": {},
+                "Emzik": {}
+            },
+            "Bebek İçeceği": {}
+        },
+        "Bebek Deterjanı ve Yumuşatıcısı": {
+            "Bebek Sıvı Çamaşır Deterjanı": {},
+            "Bebek Çamaşır Yumuşatıcı": {},
+            "Bebek Bulaşık Deterjanı": {},
+            "Bebek Toz Çamaşır Deterjanı": {}
+        },
+        "Bebek Banyo": {
+            "Bebek Şampuanı": {},
+            "Bebek Sabunu": {},
+            "Bebek Saç Kremi": {}
+        },
+        "Bebek Bakım": {
+            "Pişik Kremi": {},
+            "Bebek Ağız ve Diş Bakım": {},
+            "Bebek Yağı": {},
+            "Bebek Pudrası": {},
+            "Bebek Temizleme Pamuğu": {},
+            "Bebek Kremi, Losyonu": {},
+            "Bebek Bakım Gereçleri": {},
+            "Bebek Kulak Çubuğu": {}
+        },
+        "Anne Ürünleri": {
+            "Anne Bakım Ürünleri": {}
+        },
+        "Bebek Taşıma": {
+            "Portbebe": {}
+        },
+        "Bebek Tekstil": {
+            "Bebek Giyim": {}
+        }
+    },
+    "Deterjan, Temizlik": {
+        "Çamaşır Yıkama": {
+            "Çamaşır Deterjanı": {
+                "Toz Deterjan": {},
+                "Sıvı Çamaşır Deterjanı": {}
+            },
+            "Yumuşatıcı": {
+                "Konsantre Çamaşır Yumuşatıcıları": {},
+                "Klasik Çamaşır Yumuşatıcıları": {}
+            },
+            "Çamaşır Suyu": {
+                "Jel Çamaşır Suyu": {},
+                "Klasik Çamaşır Suyu": {}
+            },
+            "Renk Koruyucular": {
+                "Leke Çıkarıcılar": {},
+                "Tül Beyazlatıcılar": {}
+            },
+            "Kireç Önleyiciler": {}
+        },
+        "Kağıt Ürünleri": {
+            "Tuvalet Kağıdı": {},
+            "Kağıt Havlu": {},
+            "Islak Mendil": {},
+            "Peçete": {},
+            "Kağıt Mendil": {}
+        },
+        "Bulaşık Yıkama": {
+            "Bulaşık Makinesi Ürünleri": {
+                "Bulaşık Makinesi Tableti": {},
+                "Bulaşık Parlatıcı": {},
+                "Bulaşık Makinesi Temizleyici": {},
+                "Jel Bulaşık Deterjanı": {},
+                "Bulaşık Makinesi Tuzu": {},
+                "Deterjan Setleri": {}
+            },
+            "Sıvı Bulaşık Deterjanı": {}
+        },
+        "Genel Temizlik": {
+            "Mutfak Ve Banyo Temizleyiciler": {},
+            "Yüzey Temizleyiciler": {
+                "Sıvı Yüzey Temizleyiciler": {},
+                "Yüzey Dezenfektanı": {},
+                "Arap Sabunu": {}
+            },
+            "Leke Çıkarıcı Ve Koruyucular": {
+                "Parlatıcı, Temizleyici": {},
+                "Kireç Sökücüler": {},
+                "Lavabo Açıcılar": {},
+                "Yağ Çözücü": {}
+            },
+            "Tuvalet Temizleyiciler": {
+                "Tuvalet Kokusu": {},
+                "Likid Temizleyiciler": {},
+                "Rezervuar Blok": {}
+            },
+            "Hava Temizleyiciler": {
+                "Oda Kokusu": {},
+                "Çamaşır Kokuları": {},
+                "Kokulu Mum, Jel, Tütsü": {},
+                "Buzdolabı Kokuları": {}
+            },
+            "Haşere Öldürücüler": {
+                "Haşere Öldürücü Makineler, Likitleri": {},
+                "Böcek Yemi": {},
+                "Sinek Kovucu": {}
+            },
+            "Ahşap Temizleyiciler": {
+                "Ahşap Yüzey Temizleyiciler": {},
+                "Ahşap Bakım Ürünleri": {}
+            },
+            "Cam Temizleyiciler": {},
+            "Halı Şampuanları": {},
+            "Ayakkabı Bakım": {}
+        },
+        "Temizlik Malzemeleri": {
+            "Maske": {},
+            "Temizlik Bezi": {
+                "Temizlik Bezleri": {},
+                "Mikrofiber Bez": {},
+                "Yer Bezi": {},
+                "Cam Bezi": {},
+                "Bulaşık Altlığı": {}
+            },
+            "Eldiven": {},
+            "Temizlik Süngeri": {
+                "Bulaşık Süngeri": {},
+                "Bulaşık Teli": {}
+            },
+            "Mop, Paspas ve Yedekleri": {},
+            "Temizlik Seti": {},
+            "Tüy Toplayıcı Rulo": {},
+            "Temizlik Fırçası": {},
+            "Bone, Galoş, Kıyafet Koruyucu": {}
+        },
+        "Çöp Poşeti": {},
+        "Çamaşır Gereçleri": {
+            "Çamaşır Kurutmalık": {},
+            "Ütü Masası": {},
+            "Askı": {
+                "Elbise Askısı": {},
+                "Yapışkanlı Askı": {}
+            },
+            "Çamaşır ve Kirli Sepeti": {},
+            "Mandal": {},
+            "Çamaşır İpi": {},
+            "Ütü Masası Kılıfı ve Askısı": {}
+        },
+        "Banyo Gereçleri": {
+            "Banyo Set ve Aksesuarları": {},
+            "Banyo Plastikleri": {
+                "Plastik Kovalar": {}
+            }
+        }
+    },
+    "Dondurma": {
+        "Kap Dondurma": {},
+        "Tek Dondurma": {},
+        "Buz": {}
+    },
+    "Elektronik": {
+        "Görüntü ve Ses Sistemleri": {
+            "Televizyon": {},
+            "Kulaklık": {},
+            "Bluetooth Hoparlör": {},
+            "Medya Oynatıcı": {},
+            "TV Askı Aparatı": {},
+            "Müzik Sistemleri": {},
+            "Etkinlik PNR": {},
+            "HDMI, Scart Kablo": {}
+        },
+        "Elektrikli Ev Aletleri": {
+            "Kişisel Bakım": {
+                "Saç, Sakal, Tüy Temizleme Makinesi": {},
+                "Saç Kurutma Makinesi": {},
+                "Baskül": {},
+                "Masaj Aleti": {},
+                "Saç Düzleştirici, Saç Maşası": {},
+                "Epilatör": {},
+                "Ateş Ölçer": {},
+                "Tansiyon Aleti": {}
+            },
+            "Küçük Ev Aletleri": {
+                "Blender": {},
+                "Kettle": {},
+                "Tost Makinesi": {},
+                "Mikser": {},
+                "Elektrikli Izgara, Barbekü": {},
+                "Diğer Küçük Ev Aletleri": {},
+                "Rondo": {},
+                "Mini Midi Fırın": {},
+                "Mutfak Terazisi": {},
+                "Elektrikli Ocak": {},
+                "Katı Meyve Sıkacağı": {},
+                "Yumurta Pişirme Cihazı": {},
+                "Buharlı Pişirici": {},
+                "Ekmek Kızartma Makinesi": {},
+                "Fritöz": {},
+                "Kıyma Makinesi": {},
+                "Mikrodalga Fırın": {},
+                "Su Sebili": {}
+            },
+            "Süpürge": {},
+            "Çay, Kahve Makineleri": {
+                "Çay Makinesi": {},
+                "Kahve Makinesi": {},
+                "Kahve Değirmeni & Baharat Öğütücü": {}
+            },
+            "Ütü": {}
+        },
+        "Telefon ve Aksesuarları": {
+            "Telefon": {},
+            "Telefon Aksesuarları": {},
+            "Giyilebilir Aksesuar": {}
+        },
+        "Isıtma, Soğutma": {
+            "Isıtıcılar": {},
+            "Şofben & Termosifon": {},
+            "Hava Temizleyici, Nemlendirici": {},
+            "Klima": {},
+            "Vantilatör": {}
+        },
+        "Aydınlatma, Elektrik Malzemeleri": {
+            "Masa Lambaları": {},
+            "Işıldak, El Feneri": {},
+            "Sinek Kovucu": {}
+        },
+        "Bilgisayar ve Aksesuarları": {
+            "Bilgisayar Aksesuarları": {},
+            "Bilgisayar": {},
+            "Monitör": {}
+        },
+        "Beyaz Eşya": {
+            "Çamaşır Makinesi": {},
+            "Bulaşık Makinesi": {},
+            "Buzdolabı": {},
+            "Davlumbaz": {},
+            "Fırın": {},
+            "Ocak": {}
+        },
+        "Oyun Konsolları": {},
+        "Foto, Kamera": {},
+        "Hobi, Eğlence": {},
+        "Kuponlar, Kartlar": {
+            "Oto PNR": {
+                "Oto Lastik PNR": {}
+            },
+            "Kupon, Hediye Kart": {},
+            "Eğitim PNR": {},
+            "Etkinlik PNR": {}
+        }
+    },
+    "Et, Tavuk, Balık": {
+        "Kırmızı Et": {
+            "Dana Eti": {},
+            "Kuzu Eti": {},
+            "Sakatat": {},
+            "Dondurulmuş Kırmızı Et": {}
+        },
+        "Beyaz Et": {
+            "Piliç": {},
+            "Hindi": {},
+            "Diğer Beyaz Et": {}
+        },
+        "Et Şarküteri": {
+            "Sucuk": {
+                "Dana Sucuk": {},
+                "Hindi Sucuk": {},
+                "Piliç Sucuk": {}
+            },
+            "Pastırma": {
+                "Dana Pastırma": {}
+            },
+            "Sosis": {
+                "Dana Sosis": {},
+                "Piliç Sosis": {},
+                "Hindi Sosis": {}
+            },
+            "Salam": {
+                "Dana Salam": {},
+                "Hindi Salam": {},
+                "Piliç Salam": {}
+            },
+            "Füme Et": {
+                "Hindi Füme": {},
+                "Dana Füme": {},
+                "Piliç Füme": {}
+            },
+            "Kavurma": {
+                "Dana Kavurma": {}
+            },
+            "Jambon": {
+                "Dana Jambon": {},
+                "Hindi Jambon": {},
+                "Piliç Jambon": {}
+            }
+        },
+        "Balık, Deniz Ürünleri": {
+            "Mevsim Balıkları": {},
+            "Hazır Deniz Ürünleri": {},
+            "Dondurulmuş Deniz Ürünleri": {}
+        }
+    },
+    "Ev, Yaşam": {
+        "Mutfak Eşyaları": {
+            "Mutfak Sarf Malzemesi": {
+                "Buzdolabı Poşeti": {},
+                "Pişirme Kağıdı": {},
+                "Streç Film": {},
+                "Alüminyum Folyo": {},
+                "Fırın Torbası": {},
+                "Dondurulmuş Gıda Torbası": {},
+                "Mutfak Sarf Malzeme Seti": {}
+            },
+            "Servis, Sunum": {
+                "Tabak, Kase": {},
+                "Sürahi": {},
+                "Sofra Ürünleri": {},
+                "French Press": {},
+                "Çatal, Bıçak, Kaşık": {},
+                "Çay Tabağı": {},
+                "Tepsi": {}
+            },
+            "Bardak": {
+                "Kupa": {},
+                "Fincan Takımı": {},
+                "Su Bardağı": {},
+                "Meşrubat Bardağı": {},
+                "Çay Bardağı": {},
+                "Çay Takımı": {},
+                "Şarap Kadehi": {},
+                "Rakı Bardağı": {},
+                "Bira Bardağı": {},
+                "Fincan": {},
+                "Su Takımı": {}
+            },
+            "Pişirme": {
+                "Tava": {},
+                "Tencere": {},
+                "Çaydanlık": {},
+                "Sahan": {},
+                "Cezve": {},
+                "Sütlük": {},
+                "Ocak Üstü Izgara": {}
+            },
+            "Yemek Hazırlama": {
+                "Mutfak El Aletleri": {},
+                "Mutfak Bıçağı": {},
+                "Süzgeç": {},
+                "Kesme Tahtası": {},
+                "Mutfak Ekipmanları": {},
+                "Rende": {},
+                "Damacana Su Pompası": {},
+                "Tirbüşon": {},
+                "Narenciye Sıkacağı": {},
+                "Açacak": {}
+            },
+            "Saklama, Düzenleme": {
+                "Saklama Kabı": {},
+                "Kavanoz": {},
+                "Şekerlik": {},
+                "Pazar Arabası": {},
+                "Baharatlık": {},
+                "Yağlık Sirkelik": {},
+                "Mutfak Düzenleyici": {}
+            },
+            "Fırında Pişirme": {
+                "Fırın Kabı": {},
+                "Kek Kalıbı": {},
+                "Fırın Tepsisi": {},
+                "Güveç Kabı": {}
+            },
+            "Kullan At Ürünler": {},
+            "Termos, Mug": {}
+        },
+        "Dekorasyon": {
+            "Yılbaşı Malzemeleri": {
+                "Yılbaşı Ağacı Süsleri": {},
+                "Yılbaşı Ağaçları": {},
+                "Şapka ve Maskeler": {}
+            },
+            "Bahçe Mobilyası": {
+                "Sandalye, Sehpa": {},
+                "Plaj, Bahçe, Tente": {}
+            },
+            "Mum ve Mumluk": {
+                "Mum": {},
+                "Mumluk": {}
+            },
+            "Parti Malzemeleri": {
+                "Parti Kullan At Ürünleri": {},
+                "Balon": {},
+                "Aydınlatma, Mumlar": {},
+                "Bayrak": {},
+                "Dış Mekan Süsleri": {},
+                "Kostümler": {},
+                "Hediye Kutusu": {}
+            },
+            "Ev, Ofis Mobilyaları": {
+                "Ev Düzenleme": {},
+                "Raflar": {},
+                "Kitaplık, Masa": {}
+            },
+            "Vazo": {},
+            "Küllük": {},
+            "Magnet": {}
+        },
+        "Giyim": {
+            "Ayakkabı, Terlik": {
+                "Kadın Yazlık Terlik": {},
+                "Kadın Kışlık Terlik": {},
+                "Erkek Yazlık Terlik": {},
+                "Erkek Kışlık Terlik": {},
+                "Çocuk Yazlık Terlik": {},
+                "Kadın 4 Mevsim Terlik": {},
+                "Kadın Sandalet": {},
+                "Erkek 4 Mevsim Terlik": {},
+                "Kadın Deniz Ayakkabısı": {},
+                "Erkek Deniz Ayakkabısı": {},
+                "Çocuk Deniz Ayakkabısı": {},
+                "Erkek Sandalet": {},
+                "Kadın Spor, Keten Ayakkabı": {},
+                "Erkek Spor, Keten Ayakkabı": {},
+                "Çocuk Kışlık Terlik": {}
+            },
+            "İç Giyim": {
+                "Külotlu İnce Çorap": {},
+                "Erkek Ev Giyim": {},
+                "Kadın Termal Çorap": {},
+                "Kadın Ev Giyim": {},
+                "Kadın Atlet, Fanila": {},
+                "Kadın Soket Çorap": {},
+                "Erkek Paketli Çorap": {},
+                "Çocuk Paketli Çorap": {},
+                "Erkek Boxer": {},
+                "Dizaltı İnce Çorap": {},
+                "Kadın Slip": {},
+                "Erkek Termal Çorap": {},
+                "Kadın Paketli Çorap": {},
+                "Erkek Atlet, Fanila": {},
+                "Kadın Patik": {},
+                "Çocuk Atlet, Fanila": {},
+                "Kadın Suba Çorap": {},
+                "Çocuk Külotlu Çorap": {},
+                "Paketli Dizaltı Çorap": {},
+                "Erkek Suba Çorap": {},
+                "Erkek Patik": {},
+                "Çocuk Ev Giyim": {},
+                "Termal Ev Giyim": {},
+                "Çocuk Boxer": {},
+                "Erkek Slip": {},
+                "Çocuk Slip": {},
+                "Erkek Soket Çorap": {}
+            },
+            "Erkek Giyim": {},
+            "Kadın Giyim": {},
+            "Aksesuar": {
+                "Aksesuar, Çanta": {}
+            },
+            "Çocuk Giyim": {},
+            "Plaj Giyim": {
+                "Deniz Şortu": {}
+            }
+        },
+        "Ampul": {},
+        "Spor, Outdoor": {
+            "Kamp Malzemeleri": {
+                "Kamp Çadırı": {},
+                "Uyku Tulumu": {},
+                "Kamp Aksesuarları": {}
+            },
+            "Valiz": {},
+            "Spor Malzemeleri": {
+                "Spor Aksesuarları": {},
+                "Pilates Aletleri": {},
+                "Fitness Aletleri": {},
+                "Top": {},
+                "Yüzme Ürünleri": {},
+                "Bisiklet Aksesuarları": {},
+                "Bisiklet": {},
+                "Egzersiz Aletleri": {},
+                "Raketli Sporlar": {}
+            },
+            "Deniz, Havuz Ürünleri": {
+                "Şişme Havuz": {},
+                "Kolluk, Simit, Yelek": {},
+                "Deniz, Havuz Aksesuarları": {}
+            },
+            "Tekne Malzemeleri": {}
+        },
+        "Pil": {},
+        "Ev Tekstili": {
+            "Yatak Tekstili": {
+                "Yorgan": {},
+                "Battaniye": {},
+                "Yatak": {},
+                "Nevresim Takımı": {},
+                "Yastık": {},
+                "Çarşaf": {},
+                "Yatak Örtüsü": {}
+            },
+            "Hurç": {},
+            "Havlu": {},
+            "Dikiş Örgü": {},
+            "Mutfak Tekstili": {},
+            "Banyo Paspası": {}
+        },
+        "Hırdavat": {
+            "Priz": {},
+            "Yapıştırıcılar, İzolasyon Ürünleri": {},
+            "Pratik Ürünler": {},
+            "Koli Bandı": {},
+            "El Aletleri": {},
+            "Parlatıcılar , Kimyasallar": {},
+            "İp, Halat, Lastik, Tel": {},
+            "Kilit Ve Emniyet Gereçleri": {},
+            "Takım Çantası": {},
+            "Boya Ürünleri": {}
+        },
+        "Bahçe Malzemeleri": {
+            "Mangal, Barbekü": {
+                "Çakmak": {},
+                "Kömür": {},
+                "Mangal": {},
+                "Odun": {},
+                "Tutuşturucu": {},
+                "Mangal Aksesuarı": {}
+            },
+            "Piknik Ürünleri": {},
+            "Toprak": {},
+            "Saksı": {},
+            "Tohum, Bitki Besini": {},
+            "Bahçe Aksesuarları": {}
+        },
+        "Altın": {},
+        "Oto Aksesuar": {
+            "Oto Bakım Ürünleri": {},
+            "Oto Kokusu": {},
+            "Oto Aksesuarları": {},
+            "Oto Emniyet Ürünleri": {}
+        },
+        "Canlı Bitki": {},
+        "Yetiştirme Kiti": {},
+        "Kuponlar, Kartlar": {
+            "Oto PNR": {
+                "Oto Lastik PNR": {}
+            },
+            "Kupon, Hediye Kart": {},
+            "Eğitim PNR": {},
+            "Etkinlik PNR": {}
+        }
+    },
+    "Fırın, Pastane": {
+        "Ekmek": {},
+        "Hamur, Pasta Malzemeleri": {
+            "Pasta Yardımcıları": {},
+            "Krem Şanti": {},
+            "Kabartma Tozu, Şekerli Vanilin": {},
+            "Kakao": {},
+            "Kek Ve Pasta Un Karışımları": {},
+            "Instant Maya": {},
+            "İrmik": {},
+            "Nişasta": {},
+            "Pasta Tabanı": {},
+            "Pirinç Unu": {},
+            "Yaş Maya": {}
+        },
+        "Yufka, Erişte, Mantı": {
+            "Yufka": {},
+            "Mantı": {}
+        },
+        "Tatlı": {
+            "Toz Tatlılar": {},
+            "Pastane Tatlılar": {}
+        },
+        "Galeta, Grissini, Gevrek": {
+            "Gevrek Ekmek": {},
+            "Galeta, Grissini": {}
+        },
+        "Kuru Pasta": {
+            "Tatlı Kuru Pasta": {},
+            "Tuzlu Kuru Pasta": {},
+            "Kek Çeşitleri": {}
+        },
+        "Sabah Sıcakları": {
+            "Börek": {},
+            "Simit": {}
+        },
+        "Pasta": {
+            "Yaş Pasta": {}
+        }
+    },
+    "Kitap, Kırtasiye, Oyuncak": {
+        "Kırtasiye": {
+            "Kağıt": {
+                "Fotokopi Kağıdı": {},
+                "Bloknot": {},
+                "Karton": {},
+                "Yapışkanlı Not Kağıdı": {},
+                "El İşi Kağıdı": {},
+                "Not Kağıdı": {},
+                "Özel Kağıtlar": {}
+            },
+            "Kalem": {
+                "Kurşun Kalem": {},
+                "Mekanik Uçlu, Versatil Kalem": {},
+                "Keçeli Kalem": {},
+                "Tükenmez Kalem": {},
+                "Fosforlu Kalem, Markör": {}
+            },
+            "Boya, Boya Kalemi": {
+                "Kuru Boya Kalemi": {},
+                "Pastel Boya": {},
+                "Sulu Boya": {}
+            },
+            "Okul Çantaları": {
+                "Okul Çantası": {},
+                "Beslenme Çantası": {},
+                "Kalem Kutusu": {}
+            },
+            "Okul Malzemeleri": {},
+            "Defter": {
+                "Okul Defteri": {},
+                "Resim Defteri": {},
+                "Özel Defterler": {},
+                "Müzik Defteri": {}
+            },
+            "Yapıştırıcı": {},
+            "Yazı Tahtası, Pano": {},
+            "Dosyalama, Arşivleme": {},
+            "Ofis Aksesuarları": {},
+            "Hobi Ürünleri": {}
+        },
+        "Oyuncak": {
+            "Kutu Oyunları": {},
+            "Oyuncak Bebek": {},
+            "Oyuncak Araçlar": {
+                "Taşıtlar": {},
+                "Uzaktan Kumandalı Taşıtlar": {}
+            },
+            "Eğitici Oyuncaklar": {},
+            "Peluş": {},
+            "Oyun Hamuru": {},
+            "Figür Oyuncak": {},
+            "Açık Hava, Deniz, Spor": {
+                "Oyuncak Silahlar": {},
+                "Oyun Çadırı & Evi": {},
+                "Toplar": {},
+                "Spor Oyuncakları": {},
+                "Yazlık Oyuncaklar": {},
+                "Scooter": {},
+                "Kaykay, Paten": {},
+                "Akülü Araç": {},
+                "Plaj Oyuncakları": {}
+            },
+            "Yapı Oyuncakları": {},
+            "Puzzle": {},
+            "Erkek Çocuk Oyun Setleri": {},
+            "Kız Çocuk Oyun Setleri": {},
+            "Bebek Oyuncağı": {
+                "Diş Kaşıyıcı": {}
+            }
+        },
+        "Kitap, Dergi, Gazete": {
+            "Dergiler": {
+                "Çocuk Dergisi": {},
+                "Mizah Dergisi": {},
+                "Kültür, Sanat Dergisi": {},
+                "Özel Dergiler": {},
+                "Yemek Dergisi": {},
+                "Bilim, Teknoloji": {},
+                "Hobi Dergisi": {},
+                "Dekorasyon Dergisi": {},
+                "Kadın Dergileri": {},
+                "Spor Dergisi": {},
+                "Erkek Dergileri": {},
+                "Gençlik Dergisi": {},
+                "Magazin Dergisi": {},
+                "Oto Dergisi": {},
+                "İş Dünyası, Ekonomi": {},
+                "Gezi Dergisi": {}
+            },
+            "Çocuk Kitapları": {
+                "Boyama, Aktivite": {},
+                "Öykü, Masal": {},
+                "Özel Çocuk Kitapları": {},
+                "Gençlik Kitapları": {},
+                "Fantastik, Çizgi Roman": {},
+                "Çocuk Romanları": {}
+            },
+            "Yetişkin Kitapları": {
+                "Edebiyat": {},
+                "Sanat, Tasarım": {},
+                "Kişisel Gelişim": {},
+                "Araştırma, Tarih": {},
+                "Fantastik, Bilim Kurgu": {},
+                "Sağlık Kitapları": {},
+                "Çizgi Roman, Mizah": {}
+            },
+            "Gazeteler": {}
+        }
+    },
+    "Kişisel Bakım, Kozmetik, Sağlık": {
+        "Ağız Bakım Ürünleri": {
+            "Diş Fırçası": {},
+            "Diş Macunu": {},
+            "Ağız Bakım Suyu": {},
+            "Çocuk Diş Bakımı": {
+                "Çocuk Diş Macunu": {},
+                "Çocuk Diş Fırçası": {}
+            },
+            "Diş İpi": {},
+            "Diş Parlatıcı, Beyazlatma": {},
+            "Kürdan": {}
+        },
+        "Saç Bakım": {
+            "Şampuan": {},
+            "Saç Boyası": {
+                "Set Boya": {},
+                "Yarı Set Boya": {},
+                "Renkli Saç Boyası": {},
+                "Saç Renk Açıcı": {},
+                "Beyaz Kapatıcı": {},
+                "Erkek Saç Boyası": {},
+                "Saç Boyama Seti": {}
+            },
+            "Saç Kremi": {},
+            "Saç Onarıcılar": {},
+            "Saç Şekillendiriciler": {
+                "Saç Jölesi": {},
+                "Saç Spreyi": {},
+                "Saç Köpüğü": {},
+                "Krem Şekillendiriciler": {},
+                "Wax": {},
+                "Briyantin": {}
+            },
+            "Saç Tarayıcılar": {
+                "Saç Fırçası": {},
+                "Tarak": {},
+                "Toka": {}
+            },
+            "Organik Saç Bakım": {}
+        },
+        "Duş, Banyo, Sabun": {
+            "Sabun": {
+                "Yedek Sıvı Sabun": {},
+                "Banyo Sabunu": {},
+                "Sıvı Sabun": {},
+                "El, Yüz Sabunu": {}
+            },
+            "Duş Jeli": {},
+            "Lif, Sünger, Setler": {}
+        },
+        "Hijyenik Ped": {
+            "Ultra Ped": {},
+            "Günlük Ped": {},
+            "Tampon": {},
+            "İntim Ürünleri": {}
+        },
+        "Cilt Bakımı": {
+            "Yüz Bakım": {
+                "Yaşlanma Karşıtı Krem": {},
+                "Nemlendirici Krem": {},
+                "Yüz Temizleme Jelleri, Kremleri": {},
+                "Yüz Maskesi": {},
+                "Yüz Toniği": {},
+                "Yüz Temizleme Kalıpları": {},
+                "Temizleme Sütü": {},
+                "Organik Yüz Bakım Ürünleri": {},
+                "Yüz Serumu": {}
+            },
+            "El ve Vücut Bakım": {
+                "El ve Vücut Kremi": {},
+                "Vücut Losyonu": {},
+                "Vazelin": {},
+                "Vücut Fırçası": {},
+                "Vücut Sıkılaştırıcı": {},
+                "Vücut Yağı": {}
+            },
+            "Dudak Kremi": {},
+            "Erkek Cilt Bakımı": {}
+        },
+        "Makyaj": {
+            "Göz Makyajı": {
+                "Maskara": {},
+                "Eyeliner, Göz Kalemi": {},
+                "Göz Farı": {},
+                "Kaş Makyajı": {}
+            },
+            "Makyaj Temizleme": {
+                "Makyaj Temizleme Suyu": {},
+                "Makyaj Temizleme Pamuğu": {},
+                "Göz Makyaj Temizleyici": {},
+                "Makyaj Temizleme Mendili": {}
+            },
+            "Tırnak Ürünleri": {
+                "Oje": {},
+                "Aseton": {}
+            },
+            "Yüz Makyajı": {
+                "Kapatıcı": {},
+                "Fondöten": {},
+                "Makyaj Bazı": {},
+                "Allık": {},
+                "Pudra": {},
+                "Aydınlatıcı": {}
+            },
+            "Dudak Ürünleri": {
+                "Ruj": {},
+                "Dudak Kalemi": {}
+            },
+            "Makyaj Aksesuarları": {
+                "Takma Tırnak, Kirpik": {},
+                "Kirpik Kıvırıcı": {},
+                "Makyaj Kalemtraşı": {},
+                "Makyaj Çantası": {}
+            },
+            "Makyaj Fırçası": {},
+            "Takılar": {}
+        },
+        "Tıraş Malzemeleri": {
+            "Tıraş Bıçağı": {},
+            "Kullan At Tıraş Bıçağı": {},
+            "Tıraş Makinaları": {},
+            "Tıraş Jeli": {},
+            "Tıraş Köpüğü": {},
+            "Tıraş Sonrası Ürünler": {
+                "Tıraş Kolonyası": {},
+                "Tıraş Losyonu": {}
+            },
+            "Sakal Bakım": {},
+            "Tıraş Sabunu": {}
+        },
+        "Sağlık Ürünleri": {
+            "Hasta Bakım Ürünleri": {},
+            "Prezervatif, Jeller": {
+                "Prezervatif": {},
+                "Kayganlaştırıcı": {}
+            },
+            "Takviye Edici Gıda": {},
+            "Bitkisel Bakım Yağı": {},
+            "Kulak Çubuğu": {},
+            "Ayak Bakım": {
+                "Manikür Pedikür": {},
+                "Ayak Tabanlık": {},
+                "Ayak Kremi": {}
+            },
+            "Pamuk": {},
+            "İlk Yardım": {
+                "Yara Bandı": {},
+                "İlk Yardım Seti": {}
+            },
+            "Isı Bandı": {},
+            "Diğer Sağlık Ürünleri": {},
+            "Burun Bandı": {},
+            "Kişisel Bakım Aletleri": {}
+        },
+        "Parfüm, Deodorant": {
+            "Deodorant": {
+                "Kadın Deodorant": {},
+                "Erkek Deodorant": {}
+            },
+            "Parfüm": {
+                "Erkek Parfüm": {},
+                "Kadın Parfüm": {}
+            },
+            "Vücut Spreyi": {}
+        },
+        "Ağda, Epilasyon": {
+            "Kadın Tıraş Ürünleri": {},
+            "Ağda Malzemeleri": {
+                "Ağda Bandı": {},
+                "Ağda Bezi": {}
+            },
+            "Tüy Dökücü Ürünler": {
+                "Tüy Dökücü Krem": {},
+                "Tüy Sarartıcı": {}
+            },
+            "Ağda": {},
+            "Ağda Makinesi": {},
+            "Ağda Sonrası Ürünler": {},
+            "Cımbız": {}
+        },
+        "Kolonya": {},
+        "Güneş Bakım": {
+            "Güneş Kremi, Losyonu": {},
+            "Güneş Sonrası Ürünler": {},
+            "Güneşsiz Bronzlaştırıcılar": {},
+            "Güneş Yağı": {}
+        }
+    },
+    "Meyve, Sebze": {
+        "Sebze": {
+            "Mevsim Sebzeleri": {},
+            "Otlar, Yeşillikler": {},
+            "Patates, Soğan, Sarımsak": {},
+            "Egzotik Sebzeler": {},
+            "Kuru Sebzeler": {},
+            "Doğranmış, Ayıklanmış Sebzeler": {}
+        },
+        "Meyve": {
+            "Egzotik Meyveler": {},
+            "Narenciye": {},
+            "Sert Meyveler": {},
+            "Kabuklu Kuruyemiş": {},
+            "Yumuşak Meyveler": {},
+            "Kavun ve Karpuz": {},
+            "Doğranmış, Ayıklanmış Meyveler": {}
+        },
+        "Yetiştirme Kiti": {}
+    },
+    "Meze, Hazır Yemek, Donuk": {
+        "Dondurulmuş Gıda": {
+            "Dondurulmuş Hamur İşleri": {
+                "Hazır Pizza": {},
+                "Dondurulmuş Börek": {},
+                "Milföy": {},
+                "Dondurulmuş Mantı": {},
+                "Dondurulmuş Pide & Lahmacun": {}
+            },
+            "Dondurulmuş Sebze": {},
+            "Dondurulmuş Patates": {},
+            "Diğer Dondurulmuş Gıda": {},
+            "Dondurulmuş Meyve": {},
+            "Dondurulmuş Pasta, Tatlı": {}
+        },
+        "Meze": {
+            "Soğuk Meze": {},
+            "Paketli Meze": {}
+        },
+        "Pratik Yemek": {},
+        "Paketli Sandviç": {}
+    },
+    "Pet Shop": {
+        "Kedi": {
+            "Kedi Maması": {},
+            "Kedi Kumu": {},
+            "Kedi Ödül Maması": {}
+        },
+        "Köpek": {
+            "Köpek Maması": {},
+            "Köpek Ödül Maması": {}
+        },
+        "Kuş": {
+            "Kuş Yemi": {}
+        },
+        "Pet Aksesuarları": {}
+    },
+    "Süt, Kahvaltılık": {
+        "Peynir": {
+            "Beyaz Peynir": {
+                "Süzme Peynir": {},
+                "İnek Peyniri": {},
+                "Tulum Peyniri": {},
+                "Keçi Peyniri": {},
+                "Koyun Peyniri": {}
+            },
+            "Kaşar Peyniri": {
+                "Taze Kaşar": {},
+                "Eski Kaşar": {}
+            },
+            "Yerli Yöresel Peynir": {},
+            "Yabancı Yöresel Peynir": {},
+            "Krem Peynir": {},
+            "Üçgen & Burger Peynir": {},
+            "Quark Peyniri": {}
+        },
+        "Kahvaltılıklar": {
+            "Krem Çikolata, Ezmeler": {
+                "Kakao, Fındık Kremaları": {},
+                "Fıstık Ezmesı": {},
+                "Fındık Ezmesı": {},
+                "Krema, Ezmeler": {}
+            },
+            "Bal": {
+                "Çicek Balı": {},
+                "Apiterapi & Propolis": {},
+                "Özel Bal": {},
+                "Çam Balı": {},
+                "Krem Bal": {}
+            },
+            "Kahvaltılık Gevrek": {
+                "Mısır Gevreği": {},
+                "Müsli": {}
+            },
+            "Helva, Tahin, Pekmez": {
+                "Tahin": {},
+                "Helva": {},
+                "Pekmez": {}
+            },
+            "Reçel, Marmelat": {
+                "Reçel": {},
+                "Marmelat": {}
+            },
+            "Kahvaltılık Sos": {}
+        },
+        "Yumurta": {},
+        "Süt": {
+            "Uzun Ömürlü Süt": {},
+            "Günlük Süt": {}
+        },
+        "Tereyağı": {},
+        "Yoğurt": {
+            "Sade Yoğurt": {},
+            "Kaymaklı Yoğurt": {},
+            "Süzme, Çeşnili Yoğurt": {},
+            "Sağlıklı Yaşam Yoğurtları": {},
+            "Büyüme Küpü": {},
+            "Yoğurt Mayası": {},
+            "Meyveli Yoğurt": {}
+        },
+        "Zeytin": {
+            "Siyah Zeytin": {},
+            "Yeşil Zeytin": {
+                "Özel Yeşil Zeytin": {},
+                "Çizik Yeşil Zeytin": {},
+                "Biberli Yeşil Zeytin": {}
+            },
+            "Zeytin Ezmesi": {
+                "Siyah Zeytin Ezmesi": {},
+                "Yeşil Zeytin Ezmesi": {}
+            }
+        },
+        "Sütlü Tatlı, Krema": {
+            "Krema ve Sos": {},
+            "Kaymak": {},
+            "Sütlü Tatlılar": {
+                "Geleneksel Sütlü Tatlılar": {}
+            },
+            "Puding": {}
+        },
+        "Margarin": {
+            "Kase Margarin": {},
+            "Paket Margarin": {}
+        }
+    },
+    "Temel Gıda": {
+        "Sıvı Yağ": {
+            "Ayçicek Yağı": {},
+            "Zeytinyağı": {
+                "Sızma Zeytinyağı": {},
+                "Riviera Zeytinyağı": {},
+                "Özel Zeytinyağı": {}
+            },
+            "Mısırözü Yağı": {},
+            "Özel Sıvı Yağ": {},
+            "Karışım Sıvı Yağ": {},
+            "Fındık Yağı": {}
+        },
+        "Bakliyat": {
+            "Pirinç": {
+                "Baldo Pirinçler": {},
+                "Pilavlık Pirinçler": {},
+                "Osmancık Pirinç": {},
+                "İthal Pirinçler": {},
+                "Kırık Pirinçler": {},
+                "Kepekli Pirinçler": {}
+            },
+            "Mercimek": {
+                "Kırmızı Mercimek": {},
+                "Yeşil Mercimek": {},
+                "Sarı Mercimek": {}
+            },
+            "Bulgur": {
+                "Pilavlık Bulgur": {},
+                "Köftelik Bulgur": {},
+                "Katkılı Bulgur": {}
+            },
+            "Fasulye": {},
+            "Nohut": {},
+            "Mısır": {},
+            "Buğday": {},
+            "Barbunya": {},
+            "Süper Gıdalar": {
+                "Chia": {},
+                "Kinoa": {},
+                "Teff": {}
+            },
+            "Börülce": {},
+            "Bakla": {}
+        },
+        "Şeker": {
+            "Toz Şeker": {},
+            "Küp Şeker": {},
+            "Pudra Şekeri": {},
+            "Esmer Şeker": {},
+            "Sarma Şeker": {}
+        },
+        "Konserve": {
+            "Ton Balığı": {},
+            "Salça": {
+                "Domates Salçası": {},
+                "Biber Salçası": {},
+                "Domates Ürünleri": {}
+            },
+            "Turşu": {},
+            "Konserve Mısır": {},
+            "Haşlanmış": {},
+            "Közlenmiş": {},
+            "Garnitür": {},
+            "Konserve Sebze": {},
+            "Konserve Deniz Ürünleri": {},
+            "Konserve Mantar": {},
+            "Konserve Türlü": {}
+        },
+        "Un": {
+            "Sade Un": {},
+            "Un Karışımı": {},
+            "Galeta Unu": {},
+            "Mısır Unu": {}
+        },
+        "Makarna": {
+            "Normal Makarna": {},
+            "Erişte": {},
+            "Taze Makarna": {}
+        },
+        "Sos": {
+            "Ketçap": {},
+            "Mayonez": {},
+            "Sirke": {},
+            "Makarna Sosu": {},
+            "Lezzetlendrici Sos": {},
+            "Nar Ekşisi": {},
+            "Hardal": {},
+            "Soya Sosu": {},
+            "Acı Sos": {},
+            "Barbekü Sos": {},
+            "Özel Salata Sosu": {},
+            "Limon Sosu": {}
+        },
+        "Tuz, Baharat, Harç": {
+            "Baharat": {
+                "Özel Baharat": {}
+            },
+            "Tuz": {},
+            "Aktar": {
+                "Aktariye Kurutulmuş": {},
+                "Kahveler, Kakaolar Dökme": {}
+            },
+            "Harç": {
+                "Yemek Harçları": {}
+            }
+        },
+        "Sağlıklı Yaşam Ürünleri": {
+            "Ekolojik, Biyolojik Ürün": {
+                "Ekolojik, Biyolojik Bakliyat": {},
+                "Ekolojik, Biyolojik Konserve-salça-sos": {},
+                "Ekolojik, Biyolojik Çay": {},
+                "Ekolojik, Biyolojik Un": {},
+                "Ekolojik, Biyolojik Kahvaltılık Ürünler": {},
+                "Ekolojik, Biyolojik Sıvıyağ": {},
+                "Ekolojik, Biyolojik Çorba-bulyon": {},
+                "Ekolojik, Biyolojik Kuruyemiş": {},
+                "Ekolojik, Biyolojik Kahve": {}
+            },
+            "Glutensiz Ürünler": {
+                "Glutensiz Unlu Mamüller": {},
+                "Glutensiz Makarna": {},
+                "Glutensiz Un": {},
+                "Glutensiz Şekerli Ürünler": {},
+                "Glutensiz Kahvaltılık Ürünler": {},
+                "Glutensiz Diğer": {}
+            },
+            "Şekersiz Tatlandırıcılı Ürünler": {
+                "Şekersiz Tatlandırıcılı Tatlandırıcı": {},
+                "Şekersiz Tatlandırıcılı Kahvaltılık": {},
+                "Şekersiz Tatlandırıcılı Şekerleme": {}
+            },
+            "Vegan, Vejetaryen Ürünler": {},
+            "Aktif Yaşam Ürünleri": {
+                "Sporcu Takviyeleri": {},
+                "Sporcu Barları": {},
+                "Sporcu İçecekleri": {}
+            }
+        },
+        "Ramazan Paketi": {},
+        "Bulyon": {}
+    },
+    "Çiçek": {
+        "Canlı Bitki": {},
+        "Yapay Çiçek": {}
+    },
+    "İçecek": {
+        "Çay": {
+            "Dökme Çay": {},
+            "Demlik Poşet Çay": {},
+            "Bitki Çayı": {},
+            "Soğuk Çay": {},
+            "Bardak Poşet Çay": {},
+            "Form Çayı": {},
+            "Meyve Çayı": {},
+            "Çay Filtresi": {}
+        },
+        "Kahve": {
+            "Hazır Kahve": {},
+            "Türk Kahvesi": {},
+            "Filtre Kahve": {},
+            "Kapsül Kahve": {},
+            "Sıcak Çikolata ve Salep": {},
+            "Kahve Kreması": {},
+            "Kahve Filtresi": {},
+            "Soğuk Kahve": {},
+            "Süt Tozu": {},
+            "Çekirdek Kahve": {},
+            "Espresso Kahve": {}
+        },
+        "Gazlı İçecek": {
+            "Kola": {},
+            "Enerji İçeceği": {},
+            "Gazoz": {},
+            "Tonik Suyu": {},
+            "Malt İçeceği": {}
+        },
+        "Su": {},
+        "Gazsız İçecek": {
+            "Meyve Suyu": {},
+            "Kefir": {},
+            "Ayran": {},
+            "Boza": {},
+            "Limonata": {},
+            "Şalgam Suyu": {},
+            "Aroma Şurupları": {}
+        },
+        "Maden Suyu": {}
+    }
+}

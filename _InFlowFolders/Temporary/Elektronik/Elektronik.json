@@ -1,0 +1,94 @@
+{
+    "Elektronik": {
+        "Görüntü ve Ses Sistemleri": {
+            "Televizyon": {},
+            "Kulaklık": {},
+            "Bluetooth Hoparlör": {},
+            "Medya Oynatıcı": {},
+            "TV Askı Aparatı": {},
+            "Müzik Sistemleri": {},
+            "Etkinlik PNR": {},
+            "HDMI, Scart Kablo": {}
+        },
+        "Elektrikli Ev Aletleri": {
+            "Kişisel Bakım": {
+                "Saç, Sakal, Tüy Temizleme Makinesi": {},
+                "Saç Kurutma Makinesi": {},
+                "Baskül": {},
+                "Masaj Aleti": {},
+                "Saç Düzleştirici, Saç Maşası": {},
+                "Epilatör": {},
+                "Ateş Ölçer": {},
+                "Tansiyon Aleti": {}
+            },
+            "Küçük Ev Aletleri": {
+                "Blender": {},
+                "Kettle": {},
+                "Tost Makinesi": {},
+                "Mikser": {},
+                "Elektrikli Izgara, Barbekü": {},
+                "Diğer Küçük Ev Aletleri": {},
+                "Rondo": {},
+                "Mini Midi Fırın": {},
+                "Mutfak Terazisi": {},
+                "Elektrikli Ocak": {},
+                "Katı Meyve Sıkacağı": {},
+                "Yumurta Pişirme Cihazı": {},
+                "Buharlı Pişirici": {},
+                "Ekmek Kızartma Makinesi": {},
+                "Fritöz": {},
+                "Kıyma Makinesi": {},
+                "Mikrodalga Fırın": {},
+                "Su Sebili": {}
+            },
+            "Süpürge": {},
+            "Çay, Kahve Makineleri": {
+                "Çay Makinesi": {},
+                "Kahve Makinesi": {},
+                "Kahve Değirmeni & Baharat Öğütücü": {}
+            },
+            "Ütü": {}
+        },
+        "Telefon ve Aksesuarları": {
+            "Telefon": {},
+            "Telefon Aksesuarları": {},
+            "Giyilebilir Aksesuar": {}
+        },
+        "Isıtma, Soğutma": {
+            "Isıtıcılar": {},
+            "Şofben & Termosifon": {},
+            "Hava Temizleyici, Nemlendirici": {},
+            "Klima": {},
+            "Vantilatör": {}
+        },
+        "Aydınlatma, Elektrik Malzemeleri": {
+            "Masa Lambaları": {},
+            "Işıldak, El Feneri": {},
+            "Sinek Kovucu": {}
+        },
+        "Bilgisayar ve Aksesuarları": {
+            "Bilgisayar Aksesuarları": {},
+            "Bilgisayar": {},
+            "Monitör": {}
+        },
+        "Beyaz Eşya": {
+            "Çamaşır Makinesi": {},
+            "Bulaşık Makinesi": {},
+            "Buzdolabı": {},
+            "Davlumbaz": {},
+            "Fırın": {},
+            "Ocak": {}
+        },
+        "Oyun Konsolları": {},
+        "Foto, Kamera": {},
+        "Hobi, Eğlence": {},
+        "Kuponlar, Kartlar": {
+            "Oto PNR": {
+                "Oto Lastik PNR": {}
+            },
+            "Kupon, Hediye Kart": {},
+            "Eğitim PNR": {},
+            "Etkinlik PNR": {}
+        }
+    }
+}
