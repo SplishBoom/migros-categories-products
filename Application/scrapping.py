@@ -196,52 +196,7 @@ class Scrapper :
                     latest_page_move = product_browser.create_element("//*[@id=\"pagination-button-next\"]")
                     product_browser.click_on_element(latest_page_move)
 
-        def _top_down_research(name, browser) -> None:
-            """
-            RECURSIVE - Private Method, that retrieves the sub categories from the website.
-            @Params:
-                - name : (Required) - The name of the category. (str)
-                - browser : (Required) - The browser object. (Web)
-            @Return:
-                - None
-            """
-
-            temporary_navigation.append(name)
-
-            category_list = browser.create_element("/html/body/sm-root/div/main/sm-product/article/sm-list/div/div[4]/div[1]/sm-product-filters-desktop/div/div[2]/div[2]").find_elements(By.TAG_NAME, "div")
-            if len(category_list) == 1:
-                last_element_name = category_list[0].text[0:category_list[0].text.find("(")].strip()
-                owner_name = name
-                if last_element_name == owner_name :
-                    current_path = temporary_navigation
-                else :
-                    current_path = temporary_navigation + [last_element_name]
-                print(current_path)
-                _update_catalog(current_path)
-
-                last_elements_procudt_count = category_list[0].text[category_list[0].text.find("(")+1:category_list[0].text.find(")")]
-                last_elements_link = category_list[0].find_element(By.TAG_NAME, "a").get_attribute("href")
-
-                _get_products(current_path, last_elements_link, int(last_elements_procudt_count))
-                
-                return
-                
-            counter = 0
-            while counter < len(category_list) : 
-                try :
-                    current_sub_category = browser.create_element("/html/body/sm-root/div/main/sm-product/article/sm-list/div/div[4]/div[1]/sm-product-filters-desktop/div/div[2]/div[2]").find_elements(By.TAG_NAME, "div")[counter]
-                    sub_catagory_name = current_sub_category.text[0:current_sub_category.text.find("(")].strip()
-                    sub_catagory_link = current_sub_category.find_element(By.TAG_NAME, "a").get_attribute("href")
-                except :
-                    counter = counter + 1
-                    continue
-                browser.open_web_page(sub_catagory_link)
-                _top_down_research(sub_catagory_name, browser)
-                counter = counter + 1
-                browser.go_back()
-                temporary_navigation.pop()
-
-        def _get_types(category_name, category_link) -> None:
+        def _get_typos(category_name, category_link) -> None:
             """
             Private Method, that retrieves the types from the website.
             @Params:
@@ -321,13 +276,17 @@ class Scrapper :
 
             browser.open_web_page(category_link)
 
-            pop_up_deleter = browser.create_element("/html/body/sm-root/div/fe-product-cookie-indicator/div/div/button[1]")
-            browser.click_on_element(pop_up_deleter)
+            time.sleep(1)
+            try :
+                pop_up_deleter = browser.browser.find_element(By.XPATH, "/html/body/sm-root/div/fe-product-cookie-indicator/div/div/button[1]")
+                browser.click_on_element(pop_up_deleter)
+            except :
+                pass
             
             try :
                 typo_count = len(get_typos())
             except :
-                print("No typo for " + category_name + " category")
+                print(f"No typo foond in \"{category_name}\"sub- category !")
                 return
 
             for current_typo_no in range(typo_count) :
@@ -344,6 +303,53 @@ class Scrapper :
 
                 _get_typod_products(int(typos_product_count), category_link, typos_name)
 
+        def _top_down_research(name, browser) -> None:
+            """
+            RECURSIVE - Private Method, that retrieves the sub categories from the website.
+            @Params:
+                - name : (Required) - The name of the category. (str)
+                - browser : (Required) - The browser object. (Web)
+            @Return:
+                - None
+            """
+
+            temporary_navigation.append(name)
+
+            category_list = browser.create_element("/html/body/sm-root/div/main/sm-product/article/sm-list/div/div[4]/div[1]/sm-product-filters-desktop/div/div[2]/div[2]").find_elements(By.TAG_NAME, "div")
+            if len(category_list) == 1:
+                last_element_name = category_list[0].text[0:category_list[0].text.find("(")].strip()
+                owner_name = name
+                if last_element_name == owner_name :
+                    current_path = temporary_navigation
+                else :
+                    current_path = temporary_navigation + [last_element_name]
+                print(current_path)
+                _update_catalog(current_path)
+
+                last_elements_procudt_count = category_list[0].text[category_list[0].text.find("(")+1:category_list[0].text.find(")")]
+                last_elements_link = category_list[0].find_element(By.TAG_NAME, "a").get_attribute("href")
+
+                _get_products(current_path, last_elements_link, int(last_elements_procudt_count))
+                
+                _get_typos(name, last_elements_link)
+
+                return
+                
+            counter = 0
+            while counter < len(category_list) : 
+                try :
+                    current_sub_category = browser.create_element("/html/body/sm-root/div/main/sm-product/article/sm-list/div/div[4]/div[1]/sm-product-filters-desktop/div/div[2]/div[2]").find_elements(By.TAG_NAME, "div")[counter]
+                    sub_catagory_name = current_sub_category.text[0:current_sub_category.text.find("(")].strip()
+                    sub_catagory_link = current_sub_category.find_element(By.TAG_NAME, "a").get_attribute("href")
+                except :
+                    counter = counter + 1
+                    continue
+                browser.open_web_page(sub_catagory_link)
+                _top_down_research(sub_catagory_name, browser)
+                counter = counter + 1
+                browser.go_back()
+                temporary_navigation.pop()
+
         client = Web()
         client.open_web_page(link)
 
@@ -351,8 +357,6 @@ class Scrapper :
         client.click_on_element(pop_up_deleter)
 
         _top_down_research(name, client)
-
-        _get_types(name, link)
 
         typo_browser.terminate_client()
         product_browser.terminate_client()
