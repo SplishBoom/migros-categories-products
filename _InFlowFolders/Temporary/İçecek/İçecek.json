@@ -1,0 +1,45 @@
+{
+    "İçecek": {
+        "Çay": {
+            "Dökme Çay": {},
+            "Demlik Poşet Çay": {},
+            "Bitki Çayı": {},
+            "Soğuk Çay": {},
+            "Bardak Poşet Çay": {},
+            "Form Çayı": {},
+            "Meyve Çayı": {},
+            "Çay Filtresi": {}
+        },
+        "Kahve": {
+            "Hazır Kahve": {},
+            "Türk Kahvesi": {},
+            "Filtre Kahve": {},
+            "Kapsül Kahve": {},
+            "Sıcak Çikolata ve Salep": {},
+            "Kahve Kreması": {},
+            "Kahve Filtresi": {},
+            "Soğuk Kahve": {},
+            "Süt Tozu": {},
+            "Çekirdek Kahve": {},
+            "Espresso Kahve": {}
+        },
+        "Gazlı İçecek": {
+            "Kola": {},
+            "Enerji İçeceği": {},
+            "Gazoz": {},
+            "Tonik Suyu": {},
+            "Malt İçeceği": {}
+        },
+        "Su": {},
+        "Gazsız İçecek": {
+            "Meyve Suyu": {},
+            "Kefir": {},
+            "Ayran": {},
+            "Boza": {},
+            "Limonata": {},
+            "Şalgam Suyu": {},
+            "Aroma Şurupları": {}
+        },
+        "Maden Suyu": {}
+    }
+}

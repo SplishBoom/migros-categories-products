@@ -1,0 +1,42 @@
+{
+    "Fırın, Pastane": {
+        "Ekmek": {},
+        "Hamur, Pasta Malzemeleri": {
+            "Pasta Yardımcıları": {},
+            "Krem Şanti": {},
+            "Kabartma Tozu, Şekerli Vanilin": {},
+            "Kakao": {},
+            "Kek Ve Pasta Un Karışımları": {},
+            "Instant Maya": {},
+            "İrmik": {},
+            "Nişasta": {},
+            "Pasta Tabanı": {},
+            "Pirinç Unu": {},
+            "Yaş Maya": {}
+        },
+        "Yufka, Erişte, Mantı": {
+            "Yufka": {},
+            "Mantı": {}
+        },
+        "Tatlı": {
+            "Toz Tatlılar": {},
+            "Pastane Tatlılar": {}
+        },
+        "Galeta, Grissini, Gevrek": {
+            "Gevrek Ekmek": {},
+            "Galeta, Grissini": {}
+        },
+        "Kuru Pasta": {
+            "Tatlı Kuru Pasta": {},
+            "Tuzlu Kuru Pasta": {},
+            "Kek Çeşitleri": {}
+        },
+        "Sabah Sıcakları": {
+            "Börek": {},
+            "Simit": {}
+        },
+        "Pasta": {
+            "Yaş Pasta": {}
+        }
+    }
+}

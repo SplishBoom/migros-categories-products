@@ -1,0 +1,53 @@
+{
+    "Bebek": {
+        "Bebek Bezi": {
+            "Bebek Bezleri": {},
+            "Külot Bez": {},
+            "Bebek Bakım Örtüsü": {}
+        },
+        "Bebek Beslenme": {
+            "Bebek Maması": {
+                "Devam Sütü": {},
+                "Kaşık Maması": {},
+                "Kavanoz Mama": {}
+            },
+            "Bebek Atıştırmalık": {},
+            "Bebek Beslenme Araçları": {
+                "Biberon": {},
+                "Bebek Yemek Gereçleri": {},
+                "Emzik": {}
+            },
+            "Bebek İçeceği": {}
+        },
+        "Bebek Deterjanı ve Yumuşatıcısı": {
+            "Bebek Sıvı Çamaşır Deterjanı": {},
+            "Bebek Çamaşır Yumuşatıcı": {},
+            "Bebek Bulaşık Deterjanı": {},
+            "Bebek Toz Çamaşır Deterjanı": {}
+        },
+        "Bebek Banyo": {
+            "Bebek Şampuanı": {},
+            "Bebek Sabunu": {},
+            "Bebek Saç Kremi": {}
+        },
+        "Bebek Bakım": {
+            "Pişik Kremi": {},
+            "Bebek Ağız ve Diş Bakım": {},
+            "Bebek Yağı": {},
+            "Bebek Pudrası": {},
+            "Bebek Temizleme Pamuğu": {},
+            "Bebek Kremi, Losyonu": {},
+            "Bebek Bakım Gereçleri": {},
+            "Bebek Kulak Çubuğu": {}
+        },
+        "Anne Ürünleri": {
+            "Anne Bakım Ürünleri": {}
+        },
+        "Bebek Taşıma": {
+            "Portbebe": {}
+        },
+        "Bebek Tekstil": {
+            "Bebek Giyim": {}
+        }
+    }
+}

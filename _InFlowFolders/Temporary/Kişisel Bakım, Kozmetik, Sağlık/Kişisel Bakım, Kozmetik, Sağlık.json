@@ -1,0 +1,191 @@
+{
+    "Kişisel Bakım, Kozmetik, Sağlık": {
+        "Ağız Bakım Ürünleri": {
+            "Diş Fırçası": {},
+            "Diş Macunu": {},
+            "Ağız Bakım Suyu": {},
+            "Çocuk Diş Bakımı": {
+                "Çocuk Diş Macunu": {},
+                "Çocuk Diş Fırçası": {}
+            },
+            "Diş İpi": {},
+            "Diş Parlatıcı, Beyazlatma": {},
+            "Kürdan": {}
+        },
+        "Saç Bakım": {
+            "Şampuan": {},
+            "Saç Boyası": {
+                "Set Boya": {},
+                "Yarı Set Boya": {},
+                "Renkli Saç Boyası": {},
+                "Saç Renk Açıcı": {},
+                "Beyaz Kapatıcı": {},
+                "Erkek Saç Boyası": {},
+                "Saç Boyama Seti": {}
+            },
+            "Saç Kremi": {},
+            "Saç Onarıcılar": {},
+            "Saç Şekillendiriciler": {
+                "Saç Jölesi": {},
+                "Saç Spreyi": {},
+                "Saç Köpüğü": {},
+                "Krem Şekillendiriciler": {},
+                "Wax": {},
+                "Briyantin": {}
+            },
+            "Saç Tarayıcılar": {
+                "Saç Fırçası": {},
+                "Tarak": {},
+                "Toka": {}
+            },
+            "Organik Saç Bakım": {}
+        },
+        "Duş, Banyo, Sabun": {
+            "Sabun": {
+                "Yedek Sıvı Sabun": {},
+                "Banyo Sabunu": {},
+                "Sıvı Sabun": {},
+                "El, Yüz Sabunu": {}
+            },
+            "Duş Jeli": {},
+            "Lif, Sünger, Setler": {}
+        },
+        "Hijyenik Ped": {
+            "Ultra Ped": {},
+            "Günlük Ped": {},
+            "Tampon": {},
+            "İntim Ürünleri": {}
+        },
+        "Cilt Bakımı": {
+            "Yüz Bakım": {
+                "Yaşlanma Karşıtı Krem": {},
+                "Nemlendirici Krem": {},
+                "Yüz Temizleme Jelleri, Kremleri": {},
+                "Yüz Maskesi": {},
+                "Yüz Toniği": {},
+                "Yüz Temizleme Kalıpları": {},
+                "Temizleme Sütü": {},
+                "Organik Yüz Bakım Ürünleri": {},
+                "Yüz Serumu": {}
+            },
+            "El ve Vücut Bakım": {
+                "El ve Vücut Kremi": {},
+                "Vücut Losyonu": {},
+                "Vazelin": {},
+                "Vücut Fırçası": {},
+                "Vücut Sıkılaştırıcı": {},
+                "Vücut Yağı": {}
+            },
+            "Dudak Kremi": {},
+            "Erkek Cilt Bakımı": {}
+        },
+        "Makyaj": {
+            "Göz Makyajı": {
+                "Maskara": {},
+                "Eyeliner, Göz Kalemi": {},
+                "Göz Farı": {},
+                "Kaş Makyajı": {}
+            },
+            "Makyaj Temizleme": {
+                "Makyaj Temizleme Suyu": {},
+                "Makyaj Temizleme Pamuğu": {},
+                "Göz Makyaj Temizleyici": {},
+                "Makyaj Temizleme Mendili": {}
+            },
+            "Tırnak Ürünleri": {
+                "Oje": {},
+                "Aseton": {}
+            },
+            "Yüz Makyajı": {
+                "Kapatıcı": {},
+                "Fondöten": {},
+                "Makyaj Bazı": {},
+                "Allık": {},
+                "Pudra": {},
+                "Aydınlatıcı": {}
+            },
+            "Dudak Ürünleri": {
+                "Ruj": {},
+                "Dudak Kalemi": {}
+            },
+            "Makyaj Aksesuarları": {
+                "Takma Tırnak, Kirpik": {},
+                "Kirpik Kıvırıcı": {},
+                "Makyaj Kalemtraşı": {},
+                "Makyaj Çantası": {}
+            },
+            "Makyaj Fırçası": {},
+            "Takılar": {}
+        },
+        "Tıraş Malzemeleri": {
+            "Tıraş Bıçağı": {},
+            "Kullan At Tıraş Bıçağı": {},
+            "Tıraş Makinaları": {},
+            "Tıraş Jeli": {},
+            "Tıraş Köpüğü": {},
+            "Tıraş Sonrası Ürünler": {
+                "Tıraş Kolonyası": {},
+                "Tıraş Losyonu": {}
+            },
+            "Sakal Bakım": {},
+            "Tıraş Sabunu": {}
+        },
+        "Sağlık Ürünleri": {
+            "Hasta Bakım Ürünleri": {},
+            "Prezervatif, Jeller": {
+                "Prezervatif": {},
+                "Kayganlaştırıcı": {}
+            },
+            "Takviye Edici Gıda": {},
+            "Bitkisel Bakım Yağı": {},
+            "Kulak Çubuğu": {},
+            "Ayak Bakım": {
+                "Manikür Pedikür": {},
+                "Ayak Tabanlık": {},
+                "Ayak Kremi": {}
+            },
+            "Pamuk": {},
+            "İlk Yardım": {
+                "Yara Bandı": {},
+                "İlk Yardım Seti": {}
+            },
+            "Isı Bandı": {},
+            "Diğer Sağlık Ürünleri": {},
+            "Burun Bandı": {},
+            "Kişisel Bakım Aletleri": {}
+        },
+        "Parfüm, Deodorant": {
+            "Deodorant": {
+                "Kadın Deodorant": {},
+                "Erkek Deodorant": {}
+            },
+            "Parfüm": {
+                "Erkek Parfüm": {},
+                "Kadın Parfüm": {}
+            },
+            "Vücut Spreyi": {}
+        },
+        "Ağda, Epilasyon": {
+            "Kadın Tıraş Ürünleri": {},
+            "Ağda Malzemeleri": {
+                "Ağda Bandı": {},
+                "Ağda Bezi": {}
+            },
+            "Tüy Dökücü Ürünler": {
+                "Tüy Dökücü Krem": {},
+                "Tüy Sarartıcı": {}
+            },
+            "Ağda": {},
+            "Ağda Makinesi": {},
+            "Ağda Sonrası Ürünler": {},
+            "Cımbız": {}
+        },
+        "Kolonya": {},
+        "Güneş Bakım": {
+            "Güneş Kremi, Losyonu": {},
+            "Güneş Sonrası Ürünler": {},
+            "Güneşsiz Bronzlaştırıcılar": {},
+            "Güneş Yağı": {}
+        }
+    }
+}

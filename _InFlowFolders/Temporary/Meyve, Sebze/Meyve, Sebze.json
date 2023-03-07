@@ -1,0 +1,22 @@
+{
+    "Meyve, Sebze": {
+        "Sebze": {
+            "Mevsim Sebzeleri": {},
+            "Otlar, Yeşillikler": {},
+            "Patates, Soğan, Sarımsak": {},
+            "Egzotik Sebzeler": {},
+            "Kuru Sebzeler": {},
+            "Doğranmış, Ayıklanmış Sebzeler": {}
+        },
+        "Meyve": {
+            "Egzotik Meyveler": {},
+            "Narenciye": {},
+            "Sert Meyveler": {},
+            "Kabuklu Kuruyemiş": {},
+            "Yumuşak Meyveler": {},
+            "Kavun ve Karpuz": {},
+            "Doğranmış, Ayıklanmış Meyveler": {}
+        },
+        "Yetiştirme Kiti": {}
+    }
+}

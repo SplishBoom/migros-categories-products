@@ -1,0 +1,53 @@
+{
+    "Et, Tavuk, Balık": {
+        "Kırmızı Et": {
+            "Dana Eti": {},
+            "Kuzu Eti": {},
+            "Sakatat": {},
+            "Dondurulmuş Kırmızı Et": {}
+        },
+        "Beyaz Et": {
+            "Piliç": {},
+            "Hindi": {},
+            "Diğer Beyaz Et": {}
+        },
+        "Et Şarküteri": {
+            "Sucuk": {
+                "Dana Sucuk": {},
+                "Hindi Sucuk": {},
+                "Piliç Sucuk": {}
+            },
+            "Pastırma": {
+                "Dana Pastırma": {}
+            },
+            "Sosis": {
+                "Dana Sosis": {},
+                "Piliç Sosis": {},
+                "Hindi Sosis": {}
+            },
+            "Salam": {
+                "Dana Salam": {},
+                "Hindi Salam": {},
+                "Piliç Salam": {}
+            },
+            "Füme Et": {
+                "Hindi Füme": {},
+                "Dana Füme": {},
+                "Piliç Füme": {}
+            },
+            "Kavurma": {
+                "Dana Kavurma": {}
+            },
+            "Jambon": {
+                "Dana Jambon": {},
+                "Hindi Jambon": {},
+                "Piliç Jambon": {}
+            }
+        },
+        "Balık, Deniz Ürünleri": {
+            "Mevsim Balıkları": {},
+            "Hazır Deniz Ürünleri": {},
+            "Dondurulmuş Deniz Ürünleri": {}
+        }
+    }
+}

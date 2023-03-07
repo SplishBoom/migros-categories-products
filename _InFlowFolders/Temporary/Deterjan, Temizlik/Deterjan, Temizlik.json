@@ -1,0 +1,117 @@
+{
+    "Deterjan, Temizlik": {
+        "Çamaşır Yıkama": {
+            "Çamaşır Deterjanı": {
+                "Toz Deterjan": {},
+                "Sıvı Çamaşır Deterjanı": {}
+            },
+            "Yumuşatıcı": {
+                "Konsantre Çamaşır Yumuşatıcıları": {},
+                "Klasik Çamaşır Yumuşatıcıları": {}
+            },
+            "Çamaşır Suyu": {
+                "Jel Çamaşır Suyu": {},
+                "Klasik Çamaşır Suyu": {}
+            },
+            "Renk Koruyucular": {
+                "Leke Çıkarıcılar": {},
+                "Tül Beyazlatıcılar": {}
+            },
+            "Kireç Önleyiciler": {}
+        },
+        "Kağıt Ürünleri": {
+            "Tuvalet Kağıdı": {},
+            "Kağıt Havlu": {},
+            "Islak Mendil": {},
+            "Peçete": {},
+            "Kağıt Mendil": {}
+        },
+        "Bulaşık Yıkama": {
+            "Bulaşık Makinesi Ürünleri": {
+                "Bulaşık Makinesi Tableti": {},
+                "Bulaşık Parlatıcı": {},
+                "Bulaşık Makinesi Temizleyici": {},
+                "Jel Bulaşık Deterjanı": {},
+                "Bulaşık Makinesi Tuzu": {},
+                "Deterjan Setleri": {}
+            },
+            "Sıvı Bulaşık Deterjanı": {}
+        },
+        "Genel Temizlik": {
+            "Mutfak Ve Banyo Temizleyiciler": {},
+            "Yüzey Temizleyiciler": {
+                "Sıvı Yüzey Temizleyiciler": {},
+                "Yüzey Dezenfektanı": {},
+                "Arap Sabunu": {}
+            },
+            "Leke Çıkarıcı Ve Koruyucular": {
+                "Parlatıcı, Temizleyici": {},
+                "Kireç Sökücüler": {},
+                "Lavabo Açıcılar": {},
+                "Yağ Çözücü": {}
+            },
+            "Tuvalet Temizleyiciler": {
+                "Tuvalet Kokusu": {},
+                "Likid Temizleyiciler": {},
+                "Rezervuar Blok": {}
+            },
+            "Hava Temizleyiciler": {
+                "Oda Kokusu": {},
+                "Çamaşır Kokuları": {},
+                "Kokulu Mum, Jel, Tütsü": {},
+                "Buzdolabı Kokuları": {}
+            },
+            "Haşere Öldürücüler": {
+                "Haşere Öldürücü Makineler, Likitleri": {},
+                "Böcek Yemi": {},
+                "Sinek Kovucu": {}
+            },
+            "Ahşap Temizleyiciler": {
+                "Ahşap Yüzey Temizleyiciler": {},
+                "Ahşap Bakım Ürünleri": {}
+            },
+            "Cam Temizleyiciler": {},
+            "Halı Şampuanları": {},
+            "Ayakkabı Bakım": {}
+        },
+        "Temizlik Malzemeleri": {
+            "Maske": {},
+            "Temizlik Bezi": {
+                "Temizlik Bezleri": {},
+                "Mikrofiber Bez": {},
+                "Yer Bezi": {},
+                "Cam Bezi": {},
+                "Bulaşık Altlığı": {}
+            },
+            "Eldiven": {},
+            "Temizlik Süngeri": {
+                "Bulaşık Süngeri": {},
+                "Bulaşık Teli": {}
+            },
+            "Mop, Paspas ve Yedekleri": {},
+            "Temizlik Seti": {},
+            "Tüy Toplayıcı Rulo": {},
+            "Temizlik Fırçası": {},
+            "Bone, Galoş, Kıyafet Koruyucu": {}
+        },
+        "Çöp Poşeti": {},
+        "Çamaşır Gereçleri": {
+            "Çamaşır Kurutmalık": {},
+            "Ütü Masası": {},
+            "Askı": {
+                "Elbise Askısı": {},
+                "Yapışkanlı Askı": {}
+            },
+            "Çamaşır ve Kirli Sepeti": {},
+            "Mandal": {},
+            "Çamaşır İpi": {},
+            "Ütü Masası Kılıfı ve Askısı": {}
+        },
+        "Banyo Gereçleri": {
+            "Banyo Set ve Aksesuarları": {},
+            "Banyo Plastikleri": {
+                "Plastik Kovalar": {}
+            }
+        }
+    }
+}
