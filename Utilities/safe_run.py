@@ -14,6 +14,27 @@ import  os
 import  io
 import  re
 
+def _show_proffessor() -> None:
+    """
+    Private Method, that shows the Prof. Dr. Ord. Acd. Mırmır
+    @Params:
+        - None
+    @Return:
+        - None
+    """
+    str = """
+    ******************************************************************************
+    ******************************************************************************
+    **** ██               ██  ██  ██████    ██               ██  ██  ██████   ****
+    **** ████           ████  ██  █   ███   ████           ████  ██  █   ███  ****
+    **** ██  ██       ██  ██  ██  █████     ██  ██       ██  ██  ██  █████    ****
+    **** ██    ██   ██    ██  ██  ██   ██   ██    ██   ██    ██  ██  ██   ██  ****
+    **** ██      ███      ██  ██  ██    ██  ██      ███      ██  ██  ██    ██ ****
+    ******************************************************************************
+    ******************************************************************************
+    """
+    print(colorama.Fore.LIGHTBLUE_EX, str, colorama.Fore.RESET)
+
 def _get_chrome_version() -> str:
     """
     Private Method, that gets the chrome version.
@@ -150,6 +171,8 @@ def safeStart() -> None:
     """
 
     print()
+
+    _show_proffessor()
 
     for path in PRE_EXISTING_CHECKLIST :
         if not os.path.exists(path) :
