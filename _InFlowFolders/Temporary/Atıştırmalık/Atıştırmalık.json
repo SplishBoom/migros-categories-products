@@ -1,0 +1,84 @@
+{
+    "Atıştırmalık": {
+        "Çikolata": {
+            "Sütlü Çikolata": {},
+            "Hediye Çikolata": {},
+            "Bitter Çikolata": {},
+            "Draje Çikolata": {},
+            "Çocuk Çikolata": {},
+            "Beyaz Çikolata": {},
+            "Oyuncaklı Çikolata": {}
+        },
+        "Kuruyemiş": {
+            "Karışık Kuruyemiş": {},
+            "Antep Fıstığı": {},
+            "Fındık": {},
+            "Ayçekirdeği": {},
+            "Fıstık": {},
+            "Badem": {},
+            "Kaju": {},
+            "Leblebi": {},
+            "Kabak Çekirdeği": {},
+            "Diğer Kuruyemiş": {},
+            "Soslu Mısır": {}
+        },
+        "Bisküvi": {
+            "Kremalı Bisküvi": {},
+            "Kaplamalı Bisküvi": {},
+            "Tahıllı Bisküvi": {},
+            "Petibör": {},
+            "Bebe Bisküvisi": {},
+            "Form Bisküvi": {},
+            "Bisküvi Tatlı": {}
+        },
+        "Cips": {
+            "Patates Cipsi": {},
+            "Mısır Cipsi": {},
+            "Mısır Çerezi": {},
+            "Patlamış Mısır": {},
+            "Pelet Ve Diğer Cips": {},
+            "Meyve, Sebze Cipsi": {},
+            "Cips Sosu": {}
+        },
+        "Kuru Meyve": {
+            "Diğer Kuru Meyve": {},
+            "Ceviz İçi": {},
+            "Kuru Kayısı": {},
+            "Badem Çiğ": {},
+            "Kuru Üzüm": {},
+            "Karışık Çiğ": {},
+            "Hurma": {},
+            "Fındık Çiğ": {},
+            "Kuru İncir": {},
+            "Kuru Erik": {},
+            "Dut Kurusu": {}
+        },
+        "Bar, Kaplamalılar": {
+            "Meyve Bar": {},
+            "Çikolata Bar": {},
+            "Tahıllı Bar": {},
+            "Protein Bar": {},
+            "Krokan": {}
+        },
+        "Kek": {
+            "Mini Kek": {},
+            "Baton Kek": {},
+            "Tart": {},
+            "Kruvasan": {}
+        },
+        "Gofret": {
+            "Çikolatalı Gofret": {},
+            "Wafer Gofret": {},
+            "Rulo Gofret": {}
+        },
+        "Sakız": {},
+        "Kraker": {},
+        "Şekerleme": {
+            "Yumuşak Şeker": {},
+            "Draje Şekerleme": {},
+            "Lokum": {},
+            "Geleneksel Şekerleme": {},
+            "Çikolata Dökme": {}
+        }
+    }
+}

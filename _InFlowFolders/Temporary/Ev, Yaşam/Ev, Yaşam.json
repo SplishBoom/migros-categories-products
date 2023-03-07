@@ -1,0 +1,251 @@
+{
+    "Ev, Yaşam": {
+        "Mutfak Eşyaları": {
+            "Mutfak Sarf Malzemesi": {
+                "Buzdolabı Poşeti": {},
+                "Pişirme Kağıdı": {},
+                "Streç Film": {},
+                "Alüminyum Folyo": {},
+                "Fırın Torbası": {},
+                "Dondurulmuş Gıda Torbası": {},
+                "Mutfak Sarf Malzeme Seti": {}
+            },
+            "Servis, Sunum": {
+                "Tabak, Kase": {},
+                "Sürahi": {},
+                "Sofra Ürünleri": {},
+                "French Press": {},
+                "Çatal, Bıçak, Kaşık": {},
+                "Çay Tabağı": {},
+                "Tepsi": {}
+            },
+            "Bardak": {
+                "Kupa": {},
+                "Fincan Takımı": {},
+                "Su Bardağı": {},
+                "Meşrubat Bardağı": {},
+                "Çay Bardağı": {},
+                "Çay Takımı": {},
+                "Şarap Kadehi": {},
+                "Rakı Bardağı": {},
+                "Bira Bardağı": {},
+                "Fincan": {},
+                "Su Takımı": {}
+            },
+            "Pişirme": {
+                "Tava": {},
+                "Tencere": {},
+                "Çaydanlık": {},
+                "Sahan": {},
+                "Cezve": {},
+                "Sütlük": {},
+                "Ocak Üstü Izgara": {}
+            },
+            "Yemek Hazırlama": {
+                "Mutfak El Aletleri": {},
+                "Mutfak Bıçağı": {},
+                "Süzgeç": {},
+                "Kesme Tahtası": {},
+                "Mutfak Ekipmanları": {},
+                "Rende": {},
+                "Damacana Su Pompası": {},
+                "Tirbüşon": {},
+                "Narenciye Sıkacağı": {},
+                "Açacak": {}
+            },
+            "Saklama, Düzenleme": {
+                "Saklama Kabı": {},
+                "Kavanoz": {},
+                "Şekerlik": {},
+                "Pazar Arabası": {},
+                "Baharatlık": {},
+                "Yağlık Sirkelik": {},
+                "Mutfak Düzenleyici": {}
+            },
+            "Fırında Pişirme": {
+                "Fırın Kabı": {},
+                "Kek Kalıbı": {},
+                "Fırın Tepsisi": {},
+                "Güveç Kabı": {}
+            },
+            "Kullan At Ürünler": {},
+            "Termos, Mug": {}
+        },
+        "Dekorasyon": {
+            "Yılbaşı Malzemeleri": {
+                "Yılbaşı Ağacı Süsleri": {},
+                "Yılbaşı Ağaçları": {},
+                "Şapka ve Maskeler": {}
+            },
+            "Bahçe Mobilyası": {
+                "Sandalye, Sehpa": {},
+                "Plaj, Bahçe, Tente": {}
+            },
+            "Mum ve Mumluk": {
+                "Mum": {},
+                "Mumluk": {}
+            },
+            "Parti Malzemeleri": {
+                "Parti Kullan At Ürünleri": {},
+                "Balon": {},
+                "Aydınlatma, Mumlar": {},
+                "Bayrak": {},
+                "Dış Mekan Süsleri": {},
+                "Kostümler": {},
+                "Hediye Kutusu": {}
+            },
+            "Ev, Ofis Mobilyaları": {
+                "Ev Düzenleme": {},
+                "Raflar": {},
+                "Kitaplık, Masa": {}
+            },
+            "Vazo": {},
+            "Küllük": {},
+            "Magnet": {}
+        },
+        "Giyim": {
+            "Ayakkabı, Terlik": {
+                "Kadın Yazlık Terlik": {},
+                "Kadın Kışlık Terlik": {},
+                "Erkek Yazlık Terlik": {},
+                "Erkek Kışlık Terlik": {},
+                "Çocuk Yazlık Terlik": {},
+                "Kadın 4 Mevsim Terlik": {},
+                "Kadın Sandalet": {},
+                "Erkek 4 Mevsim Terlik": {},
+                "Kadın Deniz Ayakkabısı": {},
+                "Erkek Deniz Ayakkabısı": {},
+                "Çocuk Deniz Ayakkabısı": {},
+                "Erkek Sandalet": {},
+                "Kadın Spor, Keten Ayakkabı": {},
+                "Erkek Spor, Keten Ayakkabı": {},
+                "Çocuk Kışlık Terlik": {}
+            },
+            "İç Giyim": {
+                "Külotlu İnce Çorap": {},
+                "Erkek Ev Giyim": {},
+                "Kadın Termal Çorap": {},
+                "Kadın Ev Giyim": {},
+                "Kadın Atlet, Fanila": {},
+                "Kadın Soket Çorap": {},
+                "Erkek Paketli Çorap": {},
+                "Çocuk Paketli Çorap": {},
+                "Erkek Boxer": {},
+                "Dizaltı İnce Çorap": {},
+                "Kadın Slip": {},
+                "Erkek Termal Çorap": {},
+                "Kadın Paketli Çorap": {},
+                "Erkek Atlet, Fanila": {},
+                "Kadın Patik": {},
+                "Çocuk Atlet, Fanila": {},
+                "Kadın Suba Çorap": {},
+                "Çocuk Külotlu Çorap": {},
+                "Paketli Dizaltı Çorap": {},
+                "Erkek Suba Çorap": {},
+                "Erkek Patik": {},
+                "Çocuk Ev Giyim": {},
+                "Termal Ev Giyim": {},
+                "Çocuk Boxer": {},
+                "Erkek Slip": {},
+                "Çocuk Slip": {},
+                "Erkek Soket Çorap": {}
+            },
+            "Erkek Giyim": {},
+            "Kadın Giyim": {},
+            "Aksesuar": {
+                "Aksesuar, Çanta": {}
+            },
+            "Çocuk Giyim": {},
+            "Plaj Giyim": {
+                "Deniz Şortu": {}
+            }
+        },
+        "Ampul": {},
+        "Spor, Outdoor": {
+            "Kamp Malzemeleri": {
+                "Kamp Çadırı": {},
+                "Uyku Tulumu": {},
+                "Kamp Aksesuarları": {}
+            },
+            "Valiz": {},
+            "Spor Malzemeleri": {
+                "Spor Aksesuarları": {},
+                "Pilates Aletleri": {},
+                "Fitness Aletleri": {},
+                "Top": {},
+                "Yüzme Ürünleri": {},
+                "Bisiklet Aksesuarları": {},
+                "Bisiklet": {},
+                "Egzersiz Aletleri": {},
+                "Raketli Sporlar": {}
+            },
+            "Deniz, Havuz Ürünleri": {
+                "Şişme Havuz": {},
+                "Kolluk, Simit, Yelek": {},
+                "Deniz, Havuz Aksesuarları": {}
+            },
+            "Tekne Malzemeleri": {}
+        },
+        "Pil": {},
+        "Ev Tekstili": {
+            "Yatak Tekstili": {
+                "Yorgan": {},
+                "Battaniye": {},
+                "Yatak": {},
+                "Nevresim Takımı": {},
+                "Yastık": {},
+                "Çarşaf": {},
+                "Yatak Örtüsü": {}
+            },
+            "Hurç": {},
+            "Havlu": {},
+            "Dikiş Örgü": {},
+            "Mutfak Tekstili": {},
+            "Banyo Paspası": {}
+        },
+        "Hırdavat": {
+            "Priz": {},
+            "Yapıştırıcılar, İzolasyon Ürünleri": {},
+            "Pratik Ürünler": {},
+            "Koli Bandı": {},
+            "El Aletleri": {},
+            "Parlatıcılar , Kimyasallar": {},
+            "İp, Halat, Lastik, Tel": {},
+            "Kilit Ve Emniyet Gereçleri": {},
+            "Takım Çantası": {},
+            "Boya Ürünleri": {}
+        },
+        "Bahçe Malzemeleri": {
+            "Mangal, Barbekü": {
+                "Çakmak": {},
+                "Kömür": {},
+                "Mangal": {},
+                "Odun": {},
+                "Tutuşturucu": {},
+                "Mangal Aksesuarı": {}
+            },
+            "Piknik Ürünleri": {},
+            "Toprak": {},
+            "Saksı": {},
+            "Tohum, Bitki Besini": {},
+            "Bahçe Aksesuarları": {}
+        },
+        "Altın": {},
+        "Oto Aksesuar": {
+            "Oto Bakım Ürünleri": {},
+            "Oto Kokusu": {},
+            "Oto Aksesuarları": {},
+            "Oto Emniyet Ürünleri": {}
+        },
+        "Canlı Bitki": {},
+        "Yetiştirme Kiti": {},
+        "Kuponlar, Kartlar": {
+            "Oto PNR": {
+                "Oto Lastik PNR": {}
+            },
+            "Kupon, Hediye Kart": {},
+            "Eğitim PNR": {},
+            "Etkinlik PNR": {}
+        }
+    }
+}

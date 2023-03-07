@@ -1,0 +1,24 @@
+{
+    "Meze, Hazır Yemek, Donuk": {
+        "Dondurulmuş Gıda": {
+            "Dondurulmuş Hamur İşleri": {
+                "Hazır Pizza": {},
+                "Dondurulmuş Börek": {},
+                "Milföy": {},
+                "Dondurulmuş Mantı": {},
+                "Dondurulmuş Pide & Lahmacun": {}
+            },
+            "Dondurulmuş Sebze": {},
+            "Dondurulmuş Patates": {},
+            "Diğer Dondurulmuş Gıda": {},
+            "Dondurulmuş Meyve": {},
+            "Dondurulmuş Pasta, Tatlı": {}
+        },
+        "Meze": {
+            "Soğuk Meze": {},
+            "Paketli Meze": {}
+        },
+        "Pratik Yemek": {},
+        "Paketli Sandviç": {}
+    }
+}

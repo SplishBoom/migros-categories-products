@@ -1,0 +1,144 @@
+{
+    "Temel Gıda": {
+        "Sıvı Yağ": {
+            "Ayçicek Yağı": {},
+            "Zeytinyağı": {
+                "Sızma Zeytinyağı": {},
+                "Riviera Zeytinyağı": {},
+                "Özel Zeytinyağı": {}
+            },
+            "Mısırözü Yağı": {},
+            "Özel Sıvı Yağ": {},
+            "Karışım Sıvı Yağ": {},
+            "Fındık Yağı": {}
+        },
+        "Bakliyat": {
+            "Pirinç": {
+                "Baldo Pirinçler": {},
+                "Pilavlık Pirinçler": {},
+                "Osmancık Pirinç": {},
+                "İthal Pirinçler": {},
+                "Kırık Pirinçler": {},
+                "Kepekli Pirinçler": {}
+            },
+            "Mercimek": {
+                "Kırmızı Mercimek": {},
+                "Yeşil Mercimek": {},
+                "Sarı Mercimek": {}
+            },
+            "Bulgur": {
+                "Pilavlık Bulgur": {},
+                "Köftelik Bulgur": {},
+                "Katkılı Bulgur": {}
+            },
+            "Fasulye": {},
+            "Nohut": {},
+            "Mısır": {},
+            "Buğday": {},
+            "Barbunya": {},
+            "Süper Gıdalar": {
+                "Chia": {},
+                "Kinoa": {},
+                "Teff": {}
+            },
+            "Börülce": {},
+            "Bakla": {}
+        },
+        "Şeker": {
+            "Toz Şeker": {},
+            "Küp Şeker": {},
+            "Pudra Şekeri": {},
+            "Esmer Şeker": {},
+            "Sarma Şeker": {}
+        },
+        "Konserve": {
+            "Ton Balığı": {},
+            "Salça": {
+                "Domates Salçası": {},
+                "Biber Salçası": {},
+                "Domates Ürünleri": {}
+            },
+            "Turşu": {},
+            "Konserve Mısır": {},
+            "Haşlanmış": {},
+            "Közlenmiş": {},
+            "Garnitür": {},
+            "Konserve Sebze": {},
+            "Konserve Deniz Ürünleri": {},
+            "Konserve Mantar": {},
+            "Konserve Türlü": {}
+        },
+        "Un": {
+            "Sade Un": {},
+            "Un Karışımı": {},
+            "Galeta Unu": {},
+            "Mısır Unu": {}
+        },
+        "Makarna": {
+            "Normal Makarna": {},
+            "Erişte": {},
+            "Taze Makarna": {}
+        },
+        "Sos": {
+            "Ketçap": {},
+            "Mayonez": {},
+            "Sirke": {},
+            "Makarna Sosu": {},
+            "Lezzetlendrici Sos": {},
+            "Nar Ekşisi": {},
+            "Hardal": {},
+            "Soya Sosu": {},
+            "Acı Sos": {},
+            "Barbekü Sos": {},
+            "Özel Salata Sosu": {},
+            "Limon Sosu": {}
+        },
+        "Tuz, Baharat, Harç": {
+            "Baharat": {
+                "Özel Baharat": {}
+            },
+            "Tuz": {},
+            "Aktar": {
+                "Aktariye Kurutulmuş": {},
+                "Kahveler, Kakaolar Dökme": {}
+            },
+            "Harç": {
+                "Yemek Harçları": {}
+            }
+        },
+        "Sağlıklı Yaşam Ürünleri": {
+            "Ekolojik, Biyolojik Ürün": {
+                "Ekolojik, Biyolojik Bakliyat": {},
+                "Ekolojik, Biyolojik Konserve-salça-sos": {},
+                "Ekolojik, Biyolojik Çay": {},
+                "Ekolojik, Biyolojik Un": {},
+                "Ekolojik, Biyolojik Kahvaltılık Ürünler": {},
+                "Ekolojik, Biyolojik Sıvıyağ": {},
+                "Ekolojik, Biyolojik Çorba-bulyon": {},
+                "Ekolojik, Biyolojik Kuruyemiş": {},
+                "Ekolojik, Biyolojik Kahve": {}
+            },
+            "Glutensiz Ürünler": {
+                "Glutensiz Unlu Mamüller": {},
+                "Glutensiz Makarna": {},
+                "Glutensiz Un": {},
+                "Glutensiz Şekerli Ürünler": {},
+                "Glutensiz Kahvaltılık Ürünler": {},
+                "Glutensiz Diğer": {}
+            },
+            "Şekersiz Tatlandırıcılı Ürünler": {
+                "Şekersiz Tatlandırıcılı Tatlandırıcı": {},
+                "Şekersiz Tatlandırıcılı Kahvaltılık": {},
+                "Şekersiz Tatlandırıcılı Şekerleme": {}
+            },
+            "Vegan, Vejetaryen Ürünler": {},
+            "Aktif Yaşam Ürünleri": {
+                "Sporcu Takviyeleri": {},
+                "Sporcu Barları": {},
+                "Sporcu İçecekleri": {}
+            }
+        },
+        "Ramazan Paketi": {},
+        "Bulyon": {}
+    }
+}

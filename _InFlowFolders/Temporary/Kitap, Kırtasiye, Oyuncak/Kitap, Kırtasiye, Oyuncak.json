@@ -1,0 +1,112 @@
+{
+    "Kitap, Kırtasiye, Oyuncak": {
+        "Kırtasiye": {
+            "Kağıt": {
+                "Fotokopi Kağıdı": {},
+                "Bloknot": {},
+                "Karton": {},
+                "Yapışkanlı Not Kağıdı": {},
+                "El İşi Kağıdı": {},
+                "Not Kağıdı": {},
+                "Özel Kağıtlar": {}
+            },
+            "Kalem": {
+                "Kurşun Kalem": {},
+                "Mekanik Uçlu, Versatil Kalem": {},
+                "Keçeli Kalem": {},
+                "Tükenmez Kalem": {},
+                "Fosforlu Kalem, Markör": {}
+            },
+            "Boya, Boya Kalemi": {
+                "Kuru Boya Kalemi": {},
+                "Pastel Boya": {},
+                "Sulu Boya": {}
+            },
+            "Okul Çantaları": {
+                "Okul Çantası": {},
+                "Beslenme Çantası": {},
+                "Kalem Kutusu": {}
+            },
+            "Okul Malzemeleri": {},
+            "Defter": {
+                "Okul Defteri": {},
+                "Resim Defteri": {},
+                "Özel Defterler": {},
+                "Müzik Defteri": {}
+            },
+            "Yapıştırıcı": {},
+            "Yazı Tahtası, Pano": {},
+            "Dosyalama, Arşivleme": {},
+            "Ofis Aksesuarları": {},
+            "Hobi Ürünleri": {}
+        },
+        "Oyuncak": {
+            "Kutu Oyunları": {},
+            "Oyuncak Bebek": {},
+            "Oyuncak Araçlar": {
+                "Taşıtlar": {},
+                "Uzaktan Kumandalı Taşıtlar": {}
+            },
+            "Eğitici Oyuncaklar": {},
+            "Peluş": {},
+            "Oyun Hamuru": {},
+            "Figür Oyuncak": {},
+            "Açık Hava, Deniz, Spor": {
+                "Oyuncak Silahlar": {},
+                "Oyun Çadırı & Evi": {},
+                "Toplar": {},
+                "Spor Oyuncakları": {},
+                "Yazlık Oyuncaklar": {},
+                "Scooter": {},
+                "Kaykay, Paten": {},
+                "Akülü Araç": {},
+                "Plaj Oyuncakları": {}
+            },
+            "Yapı Oyuncakları": {},
+            "Puzzle": {},
+            "Erkek Çocuk Oyun Setleri": {},
+            "Kız Çocuk Oyun Setleri": {},
+            "Bebek Oyuncağı": {
+                "Diş Kaşıyıcı": {}
+            }
+        },
+        "Kitap, Dergi, Gazete": {
+            "Dergiler": {
+                "Çocuk Dergisi": {},
+                "Mizah Dergisi": {},
+                "Kültür, Sanat Dergisi": {},
+                "Özel Dergiler": {},
+                "Yemek Dergisi": {},
+                "Bilim, Teknoloji": {},
+                "Hobi Dergisi": {},
+                "Dekorasyon Dergisi": {},
+                "Kadın Dergileri": {},
+                "Spor Dergisi": {},
+                "Erkek Dergileri": {},
+                "Gençlik Dergisi": {},
+                "Magazin Dergisi": {},
+                "Oto Dergisi": {},
+                "İş Dünyası, Ekonomi": {},
+                "Gezi Dergisi": {}
+            },
+            "Çocuk Kitapları": {
+                "Boyama, Aktivite": {},
+                "Öykü, Masal": {},
+                "Özel Çocuk Kitapları": {},
+                "Gençlik Kitapları": {},
+                "Fantastik, Çizgi Roman": {},
+                "Çocuk Romanları": {}
+            },
+            "Yetişkin Kitapları": {
+                "Edebiyat": {},
+                "Sanat, Tasarım": {},
+                "Kişisel Gelişim": {},
+                "Araştırma, Tarih": {},
+                "Fantastik, Bilim Kurgu": {},
+                "Sağlık Kitapları": {},
+                "Çizgi Roman, Mizah": {}
+            },
+            "Gazeteler": {}
+        }
+    }
+}

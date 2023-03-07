@@ -1,0 +1,90 @@
+{
+    "Süt, Kahvaltılık": {
+        "Peynir": {
+            "Beyaz Peynir": {
+                "Süzme Peynir": {},
+                "İnek Peyniri": {},
+                "Tulum Peyniri": {},
+                "Keçi Peyniri": {},
+                "Koyun Peyniri": {}
+            },
+            "Kaşar Peyniri": {
+                "Taze Kaşar": {},
+                "Eski Kaşar": {}
+            },
+            "Yerli Yöresel Peynir": {},
+            "Yabancı Yöresel Peynir": {},
+            "Krem Peynir": {},
+            "Üçgen & Burger Peynir": {},
+            "Quark Peyniri": {}
+        },
+        "Kahvaltılıklar": {
+            "Krem Çikolata, Ezmeler": {
+                "Kakao, Fındık Kremaları": {},
+                "Fıstık Ezmesı": {},
+                "Fındık Ezmesı": {},
+                "Krema, Ezmeler": {}
+            },
+            "Bal": {
+                "Çicek Balı": {},
+                "Apiterapi & Propolis": {},
+                "Özel Bal": {},
+                "Çam Balı": {},
+                "Krem Bal": {}
+            },
+            "Kahvaltılık Gevrek": {
+                "Mısır Gevreği": {},
+                "Müsli": {}
+            },
+            "Helva, Tahin, Pekmez": {
+                "Tahin": {},
+                "Helva": {},
+                "Pekmez": {}
+            },
+            "Reçel, Marmelat": {
+                "Reçel": {},
+                "Marmelat": {}
+            },
+            "Kahvaltılık Sos": {}
+        },
+        "Yumurta": {},
+        "Süt": {
+            "Uzun Ömürlü Süt": {},
+            "Günlük Süt": {}
+        },
+        "Tereyağı": {},
+        "Yoğurt": {
+            "Sade Yoğurt": {},
+            "Kaymaklı Yoğurt": {},
+            "Süzme, Çeşnili Yoğurt": {},
+            "Sağlıklı Yaşam Yoğurtları": {},
+            "Büyüme Küpü": {},
+            "Yoğurt Mayası": {},
+            "Meyveli Yoğurt": {}
+        },
+        "Zeytin": {
+            "Siyah Zeytin": {},
+            "Yeşil Zeytin": {
+                "Özel Yeşil Zeytin": {},
+                "Çizik Yeşil Zeytin": {},
+                "Biberli Yeşil Zeytin": {}
+            },
+            "Zeytin Ezmesi": {
+                "Siyah Zeytin Ezmesi": {},
+                "Yeşil Zeytin Ezmesi": {}
+            }
+        },
+        "Sütlü Tatlı, Krema": {
+            "Krema ve Sos": {},
+            "Kaymak": {},
+            "Sütlü Tatlılar": {
+                "Geleneksel Sütlü Tatlılar": {}
+            },
+            "Puding": {}
+        },
+        "Margarin": {
+            "Kase Margarin": {},
+            "Paket Margarin": {}
+        }
+    }
+}
