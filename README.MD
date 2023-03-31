@@ -24,5 +24,3 @@ install requirements for python packages, then run one of the following python s
 * [x] 1. Get types of products.
 * [x] 2. Optimize the scrapping process.
 * [X] 3. Verify the results.  
-
-# project completed successfully
