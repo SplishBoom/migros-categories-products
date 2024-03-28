@@ -18,9 +18,3 @@ install requirements for python packages, then run one of the following python s
 
 1. main.py - runs the application and prints the results.
 2. scrapping.py - directly runs the scrapping procces for test cases.
-
-### To:Do
-
-* [x] 1. Get types of products.
-* [x] 2. Optimize the scrapping process.
-* [X] 3. Verify the results.  
